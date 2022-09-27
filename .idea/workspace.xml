@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Slettet test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Del opgave 1 færdiggjort. Alle har bidraget til alle klasser.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664186542367</updated>
       <workItem from="1664186543839" duration="2791000" />
-      <workItem from="1664286652664" duration="688000" />
+      <workItem from="1664286652664" duration="1922000" />
     </task>
     <task id="LOCAL-00001" summary="Klasser oprettet">
       <created>1664186711682</created>
@@ -65,7 +63,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664187524743</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Tilføjet UserInterface Klasse">
+      <created>1664287365106</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287365106</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Del opgave 1 færdiggjort. Alle har bidraget til alle klasser.">
+      <created>1664288621579</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664288621579</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +97,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Klasser oprettet" />
     <MESSAGE value="Slettet test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Slettet test" />
+    <MESSAGE value="Tilføjet UserInterface Klasse" />
+    <MESSAGE value="Del opgave 1 færdiggjort. Alle har bidraget til alle klasser." />
+    <option name="LAST_COMMIT_MESSAGE" value="Del opgave 1 færdiggjort. Alle har bidraget til alle klasser." />
   </component>
 </project>

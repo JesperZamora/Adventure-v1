@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class UserInterface {
-    Scanner input;
-    Adventure adventure;
-    String userChoiceDirection;
-    boolean isPossible;
+    private Scanner input;
+    private Adventure adventure;
+    private String userChoiceDirection;
+    private boolean isPossible;
 
     public UserInterface() {
         input = new Scanner(System.in);
@@ -74,19 +74,19 @@ public class UserInterface {
         switch(userChoiceDirection) {
             case "north":
                 isPossible = adventure.goNorth();
-                go(isPossible);
+                checkIsPossible(isPossible);
                 break;
             case "south":
                 isPossible = adventure.goSouth();
-                go(isPossible);
+                checkIsPossible(isPossible);
                 break;
             case "east":
                 isPossible = adventure.goEast();
-                go(isPossible);
+                checkIsPossible(isPossible);
                 break;
             case "west":
                 isPossible = adventure.goWest();
-                go(isPossible);
+                checkIsPossible(isPossible);
                 break;
             case "look":
                 System.out.println(">Looking around..");
@@ -99,7 +99,7 @@ public class UserInterface {
         }
     }
 
-    public void go(boolean isPossible) {
+    public void checkIsPossible(boolean isPossible) {
         if (isPossible) {
             System.out.println(">You are going " + userChoiceDirection + "...");
             System.out.println("You are now in " + adventure.getRoomNumber());
