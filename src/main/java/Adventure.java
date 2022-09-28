@@ -3,7 +3,7 @@ public class Adventure {
 
     public Adventure() {
         Map map = new Map();
-        currentRoom = map.getStarterRum();
+        currentRoom = map.getStarterRoom();
     }
 
 

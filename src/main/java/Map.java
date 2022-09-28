@@ -1,5 +1,5 @@
 public class Map {
-    private Room starterRum;
+    private Room starterRoom;
     public Map() {
         Room room1 = new Room("Room 1", "Theres nothing but two doors");
         Room room2 = new Room("Room 2", "Not much to see in this room");
@@ -30,11 +30,11 @@ public class Map {
         room7.setNorth(room4);
         room4.setSouth(room7);
 
-        starterRum = room1;
+        starterRoom = room1;
     }
 
-    public Room getStarterRum() {
-        return starterRum;
+    public Room getStarterRoom() {
+        return starterRoom;
     }
 
 }
