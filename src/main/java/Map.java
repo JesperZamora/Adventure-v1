@@ -1,14 +1,14 @@
 public class Map {
     private Room starterRoom;
     public Map() {
-        Room room1 = new Room("Room 1", "Theres nothing but two doors");
-        Room room2 = new Room("Room 2", "Not much to see in this room");
-        Room room3 = new Room("Room 3", "This room is also empty");
-        Room room4 = new Room("Room 4", "Nothing");
+        Room room1 = new Room("Room 1", "There is nothing but two doors");
+        Room room2 = new Room("Room 2", "There is very dark in room but there is one door");
+        Room room3 = new Room("Room 3", "There are paintings on the wall and one door");
+        Room room4 = new Room("Room 4", "There is nothing in the room but one door");
         Room room5 = new Room("Room 5", "There is a chest");
-        Room room6 = new Room("Room 6", "Nothing");
-        Room room7 = new Room("Room 7", "Nothing");
-        Room room8 = new Room("Room 8", "There is a panda");
+        Room room6 = new Room("Room 6", "There is nothing but a door");
+        Room room7 = new Room("Room 7", "Nothing but on door");
+        Room room8 = new Room("Room 8", "There is a panda and two doors");
         Room room9 = new Room("Room 9", "There is another panda");
 
         room1.setEast(room2);

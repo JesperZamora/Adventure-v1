@@ -11,7 +11,6 @@ public class UserInterface {
         adventure = new Adventure();
     }
 
-    //TODO: Make loop
     public void startProgram() {
         System.out.println("Welcome to The Adventure Game!\n");
         System.out.println("""
@@ -48,7 +47,8 @@ public class UserInterface {
                 Step 4. If you are a quitter type: Exit.
                 We wish you good luck on your journey!""");
 
-        System.out.println("\nYou are now in Room 1");
+        System.out.println("\n> You are now in " + adventure.getPlayer().roomNumber());
+        System.out.println(adventure.getPlayer().look());
 
         while (userChoiceDirection != "exit") {
             System.out.println("\nChoose a direction or take a look around");
@@ -87,22 +87,23 @@ public class UserInterface {
                 checkIsPossible(isPossible);
                 break;
             case "look":
-                System.out.println("> Looking around..");
-                System.out.println(adventure.look());
+                System.out.println("> Looking around...");
+                System.out.println(adventure.getPlayer().look());
                 break;
             case "exit":
                 startProgram();
             default:
-                System.out.println("Invalid direction! Try again");
+                System.out.println("> Invalid direction! Try again");
         }
     }
 
     public void checkIsPossible(boolean isPossible) {
         if (isPossible) {
             System.out.println("> You are going " + userChoiceDirection + "...");
-            System.out.println("You are now in " + adventure.getRoomNumber());
+            System.out.println("> You are now in " + adventure.getPlayer().roomNumber());
+            System.out.println(adventure.getPlayer().look());
         } else {
-            System.out.println("You can not go that way!");
+            System.out.println("> You can not go that way!");
         }
     }
 }

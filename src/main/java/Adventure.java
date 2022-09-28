@@ -9,7 +9,6 @@ public class Adventure {
         player.setCurrentRoom(map.getStarterRoom());
     }
 
-
     public boolean goSouth() {
         if (player.getCurrentRoom().getSouth() != null) {
             player.setCurrentRoom(player.getCurrentRoom().getSouth());
@@ -31,8 +30,8 @@ public class Adventure {
     }
 
     public boolean goNorth() {
-        if (currentRoom.getNorth() != null) {
-            currentRoom = currentRoom.getNorth();
+        if (player.getCurrentRoom().getNorth() != null) {
+            player.setCurrentRoom(player.getCurrentRoom().getEast());
             return true;
         }
         else {
@@ -41,8 +40,8 @@ public class Adventure {
     }
 
     public boolean goWest() {
-        if (currentRoom.getWest() != null) {
-            currentRoom = currentRoom.getWest();
+        if (player.getCurrentRoom().getWest() != null) {
+            player.setCurrentRoom(player.getCurrentRoom().getWest());
             return true;
         }
         else {
@@ -50,11 +49,7 @@ public class Adventure {
         }
     }
 
-    public String look(){
-        return currentRoom.getDescriptionOfRoom();
-    }
-
-    public String getRoomNumber() {
-        return currentRoom.getNameOfRoom();
+    public Player getPlayer() {
+        return player;
     }
 }
