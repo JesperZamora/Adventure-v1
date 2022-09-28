@@ -1,10 +1,10 @@
 public class Adventure {
     private Room currentRoom;
 
-
-
-        currentRoom = room1;
-
+    public Adventure() {
+        Map map = new Map();
+        currentRoom = map.getStarterRum();
+    }
 
 
     public boolean goSouth() {

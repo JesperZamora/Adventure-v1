@@ -24,7 +24,6 @@ public class UserInterface {
         userMenuChoice(userChoice);
     }
 
-
     public void userMenuChoice(int userChoice) {
         switch(userChoice){
             case 1:
@@ -37,7 +36,6 @@ public class UserInterface {
                 System.out.println("Wrong choice! Try again.");
         }
     }
-
 
     public void userInstuctions() {
         System.out.println("\n---------- Gameplay Instructions ---------");
@@ -89,7 +87,7 @@ public class UserInterface {
                 checkIsPossible(isPossible);
                 break;
             case "look":
-                System.out.println(">Looking around..");
+                System.out.println("> Looking around..");
                 System.out.println(adventure.look());
                 break;
             case "exit":
@@ -101,11 +99,10 @@ public class UserInterface {
 
     public void checkIsPossible(boolean isPossible) {
         if (isPossible) {
-            System.out.println(">You are going " + userChoiceDirection + "...");
+            System.out.println("> You are going " + userChoiceDirection + "...");
             System.out.println("You are now in " + adventure.getRoomNumber());
         } else {
             System.out.println("You can not go that way!");
         }
     }
 }
-
