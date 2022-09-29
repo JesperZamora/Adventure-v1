@@ -7,11 +7,8 @@ public class Item {
         this.itemDescription = itemDescription;
     }
 
-    public String getItemName() {
-        return itemName;
+    public String toString(){
+        return "Item found: " + itemName + "\n"+ "Description: " + itemDescription;
     }
 
-    public String getItemDescription() {
-        return itemDescription;
-    }
 }

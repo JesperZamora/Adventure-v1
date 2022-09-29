@@ -17,6 +17,15 @@ public class Player {
         return currentRoom.getNameOfRoom();
     }
 
+
+    public String lookForItems() {
+       String itemInRoom = null;
+        for (int i = 0; i <currentRoom.getItems().size(); i++) {
+            itemInRoom = currentRoom.getItems().get(i).toString();
+        }
+        return itemInRoom;
+    }
+
     public boolean goSouth() {
         if (currentRoom.getSouth() != null) {
             setCurrentRoom(getCurrentRoom().getSouth());

@@ -90,10 +90,13 @@ public class UserInterface {
                 System.out.println("> Looking around...");
                 System.out.println(adventure.getPlayer().look());
                 break;
+            case "look around":
+                System.out.println(adventure.getPlayer().lookForItems());
+                break;
             case "exit":
                 startProgram();
             default:
-                System.out.println("> Invalid direction! Try again");
+                System.out.println("> Invalid command! Try again");
         }
     }
 
