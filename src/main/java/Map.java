@@ -11,6 +11,14 @@ public class Map {
         Room room8 = new Room("Room 8", "There is a panda and two doors");
         Room room9 = new Room("Room 9", "There is another panda");
 
+        room1.addItem("torch", "it is burned out");
+        room2.addItem("matches", "matchbox with a few matches left");
+        room2.addItem("cloth", "small cloth piece");
+        room3.addItem("sword", "it is shiny");
+        room5.addItem("chest", "it is locked");
+        room7.addItem("key", "it is old and can open something");
+        room9.addItem("shield", "there is a lion on the shield");
+
         room1.setEast(room2);
         room1.setSouth(room4);
         room4.setNorth(room1);
