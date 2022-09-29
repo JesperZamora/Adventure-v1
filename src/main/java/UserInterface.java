@@ -71,19 +71,19 @@ public class UserInterface {
     public void userCommands(String userChoiceDirection) {
         switch(userChoiceDirection) {
             case "north":
-                isPossible = adventure.goNorth();
+                isPossible = adventure.getPlayer().goNorth();
                 checkIsPossible(isPossible);
                 break;
             case "south":
-                isPossible = adventure.goSouth();
+                isPossible = adventure.getPlayer().goSouth();
                 checkIsPossible(isPossible);
                 break;
             case "east":
-                isPossible = adventure.goEast();
+                isPossible = adventure.getPlayer().goEast();
                 checkIsPossible(isPossible);
                 break;
             case "west":
-                isPossible = adventure.goWest();
+                isPossible = adventure.getPlayer().goWest();
                 checkIsPossible(isPossible);
                 break;
             case "look":
