@@ -7,8 +7,10 @@ public class Item {
         this.itemDescription = itemDescription;
     }
 
+
     public String toString(){
         return "Item found: " + itemName + "\n"+ "Description: " + itemDescription;
     }
+
 
 }

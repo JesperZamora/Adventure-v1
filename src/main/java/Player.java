@@ -18,14 +18,6 @@ public class Player {
     }
 
 
-    public String lookForItems() {
-       String itemInRoom = null;
-        for (int i = 0; i <currentRoom.getItems().size(); i++) {
-            itemInRoom = currentRoom.getItems().get(i).toString();
-        }
-        return itemInRoom;
-    }
-
     public boolean goSouth() {
         if (currentRoom.getSouth() != null) {
             setCurrentRoom(getCurrentRoom().getSouth());
@@ -48,7 +40,7 @@ public class Player {
 
     public boolean goNorth() {
         if (currentRoom.getNorth() != null) {
-            setCurrentRoom(getCurrentRoom().getEast());
+            setCurrentRoom(getCurrentRoom().getNorth());
             return true;
         }
         else {
@@ -66,5 +58,12 @@ public class Player {
         }
     }
 
+    public Item lookForItems(){
+        Item itemInRoom = null;
+        for (int i = 0; i < currentRoom.getItems().size(); i++) {
+            itemInRoom = currentRoom.getItems().get(i);
+        }
+        return itemInRoom;
+    }
 
 }

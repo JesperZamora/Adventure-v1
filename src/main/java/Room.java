@@ -19,7 +19,6 @@ public class Room {
         return items;
     }
 
-
     public Room(String nameOfRoom, String descriptionOfRoom){
         this.nameOfRoom = nameOfRoom;
         this.descriptionOfRoom = descriptionOfRoom;
@@ -57,4 +56,5 @@ public class Room {
     public String getNameOfRoom() {
         return nameOfRoom;
     }
+
 }

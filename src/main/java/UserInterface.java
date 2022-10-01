@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner input;
     private Adventure adventure;
-    private String userChoiceDirection;
+    private String userChoice;
     private boolean isPossible;
 
     public UserInterface() {
@@ -12,86 +12,48 @@ public class UserInterface {
     }
 
     public void startProgram() {
-        System.out.println("Welcome to The Adventure Game!\n");
-        System.out.println("""
-                ----- Menu -----
-                1. Start playing
-                2. Exit game""");
+        System.out.println("\n\tWelcome to The Adventure Game!\n");
+        System.out.println("----------- Gameplay Commands ----------");
+        gameplayCommands();
+        System.out.println("Type your first command and press ENTER!");
 
-        int userChoice = input.nextInt();
-        input.nextLine();
-        userMenuChoice(userChoice);
-    }
-
-    public void userMenuChoice(int userChoice) {
-        switch(userChoice){
-            case 1:
-                userInstuctions();
-                break;
-            case 2:
-                System.out.println("Exiting game. Goodbye!");
-                break;
-            default:
-                System.out.println("Wrong choice! Try again.");
+        userChoice = "";
+        while (!userChoice.equals("exit")) {
+            userChoice = input.nextLine();
+            userChoice = userChoice.toLowerCase();
+            userCommands(userChoice);
         }
     }
 
-    public void userInstuctions() {
-        System.out.println("\n---------- Gameplay Instructions ---------");
-        System.out.println("""
-                Listen up! We have few instructions for you before we begin.
-                To go through the rooms you have to choose a direction.
-                Step 1. You have four choices you can go: North, South, East and West.
-                Step 2. If you want to look around just type: Look.
-                Step 3. If you forget Step 1. type: Help.
-                Step 4. If you are a quitter type: Exit.
-                We wish you good luck on your journey!""");
-
-        System.out.println("\n> You are now in " + adventure.getPlayer().roomNumber());
-        System.out.println(adventure.getPlayer().look());
-
-        while (userChoiceDirection != "exit") {
-            System.out.println("\nChoose a direction or take a look around");
-
-            userChoiceDirection = input.nextLine();
-            userChoiceDirection = userChoiceDirection.toLowerCase();
-            if (userChoiceDirection.contains("north"))
-                userChoiceDirection = "north";
-            else if (userChoiceDirection.contains("south"))
-                userChoiceDirection = "south";
-            else if (userChoiceDirection.contains("east"))
-                userChoiceDirection = "east";
-            else if (userChoiceDirection.contains("west"))
-                userChoiceDirection = "west";
-            userCommands(userChoiceDirection);
-        }
-
-    }
-
-    public void userCommands(String userChoiceDirection) {
-        switch(userChoiceDirection) {
-            case "north":
+    public void userCommands(String userChoice) {
+        switch(userChoice) {
+            case "go north", "north", "n":
+                System.out.println("> Going north...");
                 isPossible = adventure.getPlayer().goNorth();
                 checkIsPossible(isPossible);
                 break;
-            case "south":
+            case "go south", "south", "s":
+                System.out.println("> Going south...");
                 isPossible = adventure.getPlayer().goSouth();
                 checkIsPossible(isPossible);
                 break;
-            case "east":
+            case "go east", "east", "e":
+                System.out.println("> Going east...");
                 isPossible = adventure.getPlayer().goEast();
                 checkIsPossible(isPossible);
                 break;
-            case "west":
+            case "go west", "west", "w":
+                System.out.println("> Going west...");
                 isPossible = adventure.getPlayer().goWest();
                 checkIsPossible(isPossible);
                 break;
-            case "look":
+            case "look", "l":
                 System.out.println("> Looking around...");
                 System.out.println(adventure.getPlayer().look());
-                break;
-            case "look around":
                 System.out.println(adventure.getPlayer().lookForItems());
+                break;
+            case "help", "h":
+                gameplayCommands();
                 break;
             case "exit":
                 startProgram();
@@ -102,11 +64,32 @@ public class UserInterface {
 
     public void checkIsPossible(boolean isPossible) {
         if (isPossible) {
-            System.out.println("> You are going " + userChoiceDirection + "...");
             System.out.println("> You are now in " + adventure.getPlayer().roomNumber());
-            System.out.println(adventure.getPlayer().look());
+            System.out.println("> " + adventure.getPlayer().look());
         } else {
             System.out.println("> You can not go that way!");
         }
     }
+
+
+    public void gameplayCommands(){
+        System.out.println("""
+                Movement commands:
+                "Go North"   (N) - move north
+                "Go South"   (S) - move south
+                "Go East"    (E) - move east
+                "Go West     (W) - move west
+                
+                In-game commands:
+                "Look"       (L) - to look arounds
+                "Take"       (T) - take an item
+                "Drop"       (D) - drop item
+                "Inventory"  (I) - show inventory
+                
+                Other commands:
+                "Help"       (H) - list of commands
+                "Exit"           - exit gameplay
+                """);
+    }
+
 }

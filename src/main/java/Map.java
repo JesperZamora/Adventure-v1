@@ -39,10 +39,12 @@ public class Map {
         room4.setSouth(room7);
 
         starterRoom = room1;
+
     }
 
     public Room getStarterRoom() {
         return starterRoom;
     }
+
 
 }
