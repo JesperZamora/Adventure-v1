@@ -15,7 +15,10 @@ public class UserInterface {
         System.out.println("\n\tWelcome to The Adventure Game!\n");
         System.out.println("----------- Gameplay Commands ----------");
         gameplayCommands();
-        System.out.println("Type your first command and press ENTER!");
+        System.out.println("----------------------------------------\n");
+        //Starting point
+        System.out.println("You are now in " + adventure.getPlayer().roomNumber());
+        System.out.println(adventure.getPlayer().look());
 
         userChoice = "";
         while (!userChoice.equals("exit")) {
@@ -28,29 +31,40 @@ public class UserInterface {
     public void userCommands(String userChoice) {
         switch(userChoice) {
             case "go north", "north", "n":
-                System.out.println("> Going north...");
+                System.out.println("Going north...");
                 isPossible = adventure.getPlayer().goNorth();
                 checkIsPossible(isPossible);
                 break;
             case "go south", "south", "s":
-                System.out.println("> Going south...");
+                System.out.println("Going south...");
                 isPossible = adventure.getPlayer().goSouth();
                 checkIsPossible(isPossible);
                 break;
             case "go east", "east", "e":
-                System.out.println("> Going east...");
+                System.out.println("Going east...");
                 isPossible = adventure.getPlayer().goEast();
                 checkIsPossible(isPossible);
                 break;
             case "go west", "west", "w":
-                System.out.println("> Going west...");
+                System.out.println("Going west...");
                 isPossible = adventure.getPlayer().goWest();
                 checkIsPossible(isPossible);
                 break;
             case "look", "l":
-                System.out.println("> Looking around...");
-                System.out.println(adventure.getPlayer().look());
-                System.out.println(adventure.getPlayer().lookForItems());
+                System.out.println("Looking around...");
+                System.out.println("You found a "+adventure.getPlayer().getCurrentRoom().getItems());
+                break;
+            case "take", "t":
+                System.out.println("Do you want to take an item?");
+                String takeItem = input.nextLine();
+                adventure.getPlayer().takeItemInRoom(takeItem);
+                break;
+            case "drop", "d":
+                System.out.println("Do you want to drop an item?");
+                break;
+            case "inventory", "i":
+                System.out.println("Your inventory contains...");
+                System.out.println(adventure.getPlayer().getInventory());
                 break;
             case "help", "h":
                 gameplayCommands();
@@ -60,16 +74,16 @@ public class UserInterface {
                 int exit = 0;
                 System.exit(exit);
             default:
-                System.out.println("> Invalid command! Try again");
+                System.out.println("Invalid command! Try again");
         }
     }
 
     public void checkIsPossible(boolean isPossible) {
         if (isPossible) {
-            System.out.println("> You are now in " + adventure.getPlayer().roomNumber());
-            System.out.println("> " + adventure.getPlayer().look());
+            System.out.println("You are now in " + adventure.getPlayer().roomNumber());
+            System.out.println(adventure.getPlayer().look());
         } else {
-            System.out.println("> You can not go that way!");
+            System.out.println("You can not go that way!");
         }
     }
 

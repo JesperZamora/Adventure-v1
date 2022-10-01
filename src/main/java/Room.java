@@ -10,8 +10,8 @@ public class Room {
 
     private ArrayList<Item> items = new ArrayList<>();
 
-    public void addItem(String itemName, String itemDescription) {
-        Item newItem = new Item(itemName, itemDescription);
+    public void addItem(String itemName) {
+        Item newItem = new Item(itemName);
         items.add(newItem);
     }
 
@@ -19,11 +19,20 @@ public class Room {
         return items;
     }
 
+    public Item findRoomItems (String name) {
+        for (Item i : items) {
+            if(i.getItemName().equals(name)) {
+                return i;
+            }
+        }
+        return null;
+    }
+
+
     public Room(String nameOfRoom, String descriptionOfRoom){
         this.nameOfRoom = nameOfRoom;
         this.descriptionOfRoom = descriptionOfRoom;
     }
-
 
     public void setNorth(Room north) {
         this.north = north;

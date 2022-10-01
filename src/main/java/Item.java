@@ -2,14 +2,17 @@ public class Item {
     private String itemName;
     private String itemDescription;
 
-    public Item(String itemName, String itemDescription) {
+    public Item(String itemName) {
         this.itemName = itemName;
-        this.itemDescription = itemDescription;
+    }
+
+    public String getItemName() {
+        return itemName;
     }
 
 
     public String toString(){
-        return "Item found: " + itemName + "\n"+ "Description: " + itemDescription;
+        return itemName;
     }
 
 
