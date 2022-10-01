@@ -9,11 +9,31 @@ public class Player {
         Item takeItem = currentRoom.findRoomItems(itemName);
         if (takeItem == null) {
             System.out.println("There is nothing like " + itemName + " to take around here!");
-        }else {
+        } else {
             addItemtoInventory(itemName);
             currentRoom.getItems().remove(takeItem);
             System.out.println("Item " + itemName + " added to your inventory");
         }
+    }
+
+    public void dropItemInRoom (String itemName) {
+        Item dropItem = findInventoryItems(itemName);
+        if (dropItem == null) {
+            System.out.println("You do not have that item");
+        } else {
+            currentRoom.addItem(itemName);
+            inventory.remove(dropItem);
+            System.out.println(itemName + " dropped in " + currentRoom.getNameOfRoom());
+        }
+    }
+
+    public Item findInventoryItems(String name) {
+        for(Item i : inventory) {
+            if(i.getItemName().equals(name)) {
+                return i;
+            }
+        }
+        return null;
     }
 
 

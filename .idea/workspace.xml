@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Fejl rettet ved at skrive &quot;exit&quot;, den går ikke til start menu og programmet går ikke ned.">
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Rettet lidt i interface, så bruger får info hvilket de starter i. Har opdateret switch med take, drop og inventory. Har lavet om så &quot;look&quot; metoder viser items fundet i rummet. Der er lavet findItem metode i room klassen, take metode i player klassen + add metode til player klasses arraylist(inventory).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664663079220</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Rettet lidt i interface, så bruger får info hvilket de starter i. Har opdateret switch med take, drop og inventory. Har lavet om så &quot;look&quot; metoder viser items fundet i rummet. Der er lavet findItem metode i room klassen, take metode i player klassen + add metode til player klasses arraylist(inventory).">
+      <created>1664667345138</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664667345138</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +178,7 @@
     <MESSAGE value="Lavet en for-loop til Player klassen til at kunne løbe arrayet igennem og give elementerne i det pågældende rum player står i.&#10;Fjernet getter metoder for itemName og itemDescription i Item og lavet en to-string i stedet i Item klassen.&#10;Tilføjet ekstra funktion til switch. Bruger kan skrive &quot;look around&quot; og finde de items rummet har." />
     <MESSAGE value="Fjernet menu og intructions, så spillet bare går igang og interface bliver mere sipmelt. Har adderet shortcuts som &quot;south&quot; og &quot;S&quot; til switch case så der ikke behov for en metode med if else statements" />
     <MESSAGE value="Fejl rettet ved at skrive &quot;exit&quot;, den går ikke til start menu og programmet går ikke ned." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fejl rettet ved at skrive &quot;exit&quot;, den går ikke til start menu og programmet går ikke ned." />
+    <MESSAGE value="Rettet lidt i interface, så bruger får info hvilket de starter i. Har opdateret switch med take, drop og inventory. Har lavet om så &quot;look&quot; metoder viser items fundet i rummet. Der er lavet findItem metode i room klassen, take metode i player klassen + add metode til player klasses arraylist(inventory)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rettet lidt i interface, så bruger får info hvilket de starter i. Har opdateret switch med take, drop og inventory. Har lavet om så &quot;look&quot; metoder viser items fundet i rummet. Der er lavet findItem metode i room klassen, take metode i player klassen + add metode til player klasses arraylist(inventory)." />
   </component>
 </project>

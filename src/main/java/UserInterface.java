@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner input;
     private Adventure adventure;
-    private String userChoice;
+    private String userChoice, takeItem, dropItem;
     private boolean isPossible;
 
     public UserInterface() {
@@ -52,15 +52,17 @@ public class UserInterface {
                 break;
             case "look", "l":
                 System.out.println("Looking around...");
-                System.out.println("You found a "+adventure.getPlayer().getCurrentRoom().getItems());
+                System.out.println("Found "+adventure.getPlayer().getCurrentRoom().getItems());
                 break;
             case "take", "t":
                 System.out.println("Do you want to take an item?");
-                String takeItem = input.nextLine();
+                takeItem = input.nextLine();
                 adventure.getPlayer().takeItemInRoom(takeItem);
                 break;
             case "drop", "d":
                 System.out.println("Do you want to drop an item?");
+                dropItem = input.nextLine();
+                adventure.getPlayer().dropItemInRoom(dropItem);
                 break;
             case "inventory", "i":
                 System.out.println("Your inventory contains...");
