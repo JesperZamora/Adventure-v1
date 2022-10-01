@@ -56,7 +56,9 @@ public class UserInterface {
                 gameplayCommands();
                 break;
             case "exit":
-                startProgram();
+                System.out.println("Exiting game. Goodbye!");
+                int exit = 0;
+                System.exit(exit);
             default:
                 System.out.println("> Invalid command! Try again");
         }

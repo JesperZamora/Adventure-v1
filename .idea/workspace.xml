@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Lavet en for-loop til Player klassen til at kunne løbe arrayet igennem og give elementerne i det pågældende rum player står i.&#10;Fjernet getter metoder for itemName og itemDescription i Item og lavet en to-string i stedet i Item klassen.&#10;Tilføjet ekstra funktion til switch. Bruger kan skrive &quot;look around&quot; og finde de items rummet har.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Fjernet menu og intructions, så spillet bare går igang og interface bliver mere sipmelt. Har adderet shortcuts som &quot;south&quot; og &quot;S&quot; til switch case så der ikke behov for en metode med if else statements">
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664488446661</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fjernet menu og intructions, så spillet bare går igang og interface bliver mere sipmelt. Har adderet shortcuts som &quot;south&quot; og &quot;S&quot; til switch case så der ikke behov for en metode med if else statements">
+      <created>1664662930553</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664662930553</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +160,7 @@
     <MESSAGE value="Lavet Arrayliste i Room Klasen over items. Metode &quot;addItem&quot; lavet til at kunne modtage og addere items til array.&#10;Arraylist-getter metode laver til at kunne returnere items." />
     <MESSAGE value="Lavet items ojekter lavet i Map Klassen." />
     <MESSAGE value="Lavet en for-loop til Player klassen til at kunne løbe arrayet igennem og give elementerne i det pågældende rum player står i.&#10;Fjernet getter metoder for itemName og itemDescription i Item og lavet en to-string i stedet i Item klassen.&#10;Tilføjet ekstra funktion til switch. Bruger kan skrive &quot;look around&quot; og finde de items rummet har." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lavet en for-loop til Player klassen til at kunne løbe arrayet igennem og give elementerne i det pågældende rum player står i.&#10;Fjernet getter metoder for itemName og itemDescription i Item og lavet en to-string i stedet i Item klassen.&#10;Tilføjet ekstra funktion til switch. Bruger kan skrive &quot;look around&quot; og finde de items rummet har." />
+    <MESSAGE value="Fjernet menu og intructions, så spillet bare går igang og interface bliver mere sipmelt. Har adderet shortcuts som &quot;south&quot; og &quot;S&quot; til switch case så der ikke behov for en metode med if else statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fjernet menu og intructions, så spillet bare går igang og interface bliver mere sipmelt. Har adderet shortcuts som &quot;south&quot; og &quot;S&quot; til switch case så der ikke behov for en metode med if else statements" />
   </component>
 </project>
