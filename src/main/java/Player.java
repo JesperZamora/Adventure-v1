@@ -5,14 +5,14 @@ public class Player {
 
     ArrayList<Item> inventory = new ArrayList<>();
 
-    public void takeItemInRoom (String itemName){
+    public boolean takeItemInRoom (String itemName){
         Item takeItem = currentRoom.findRoomItems(itemName);
-        if (takeItem == null) {
-            System.out.println("There is nothing like " + itemName + " to take around here!");
-        } else {
+        if (takeItem != null) {
             addItemtoInventory(itemName);
             currentRoom.getItems().remove(takeItem);
-            System.out.println("Item " + itemName + " added to your inventory");
+            return true;
+        } else {
+            return false;
         }
     }
 
@@ -35,8 +35,6 @@ public class Player {
         }
         return null;
     }
-
-
 
     public void addItemtoInventory(String itemName) {
         Item newItem = new Item (itemName);

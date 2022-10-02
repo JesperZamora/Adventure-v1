@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Rettet lidt i interface, så bruger får info hvilket de starter i. Har opdateret switch med take, drop og inventory. Har lavet om så &quot;look&quot; metoder viser items fundet i rummet. Der er lavet findItem metode i room klassen, take metode i player klassen + add metode til player klasses arraylist(inventory).">
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Lavet drop metode. Kunne ikke få det til at fungere med description med itemDescription. Så den er fjernet for nu.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
@@ -149,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664667345138</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Lavet drop metode. Kunne ikke få det til at fungere med description med itemDescription. Så den er fjernet for nu.">
+      <created>1664668135423</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1664668135423</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +186,7 @@
     <MESSAGE value="Fjernet menu og intructions, så spillet bare går igang og interface bliver mere sipmelt. Har adderet shortcuts som &quot;south&quot; og &quot;S&quot; til switch case så der ikke behov for en metode med if else statements" />
     <MESSAGE value="Fejl rettet ved at skrive &quot;exit&quot;, den går ikke til start menu og programmet går ikke ned." />
     <MESSAGE value="Rettet lidt i interface, så bruger får info hvilket de starter i. Har opdateret switch med take, drop og inventory. Har lavet om så &quot;look&quot; metoder viser items fundet i rummet. Der er lavet findItem metode i room klassen, take metode i player klassen + add metode til player klasses arraylist(inventory)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rettet lidt i interface, så bruger får info hvilket de starter i. Har opdateret switch med take, drop og inventory. Har lavet om så &quot;look&quot; metoder viser items fundet i rummet. Der er lavet findItem metode i room klassen, take metode i player klassen + add metode til player klasses arraylist(inventory)." />
+    <MESSAGE value="Lavet drop metode. Kunne ikke få det til at fungere med description med itemDescription. Så den er fjernet for nu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lavet drop metode. Kunne ikke få det til at fungere med description med itemDescription. Så den er fjernet for nu." />
   </component>
 </project>

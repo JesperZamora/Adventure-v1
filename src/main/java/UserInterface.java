@@ -4,7 +4,7 @@ public class UserInterface {
     private Scanner input;
     private Adventure adventure;
     private String userChoice, takeItem, dropItem;
-    private boolean isPossible;
+    private boolean isPossible, isPossibleToTakeItem, isPossibleToDropItem;
 
     public UserInterface() {
         input = new Scanner(System.in);
@@ -57,7 +57,8 @@ public class UserInterface {
             case "take", "t":
                 System.out.println("Do you want to take an item?");
                 takeItem = input.nextLine();
-                adventure.getPlayer().takeItemInRoom(takeItem);
+                isPossibleToTakeItem = adventure.getPlayer().takeItemInRoom(takeItem);
+                checkIsPossibleToTakeItem(isPossibleToTakeItem);
                 break;
             case "drop", "d":
                 System.out.println("Do you want to drop an item?");
@@ -88,6 +89,19 @@ public class UserInterface {
             System.out.println("You can not go that way!");
         }
     }
+
+    public void checkIsPossibleToTakeItem(boolean isPossibleToTakeItem) {
+        if (isPossibleToTakeItem) {
+            System.out.println("Item added to your inventory!");
+        } else {
+            System.out.println("There is no such item to take around here");
+        }
+    }
+    /*
+    System.out.println("There is nothing like " + itemName + " to take around here!");
+    System.out.println("Item " + itemName + " added to your inventory");
+
+     */
 
 
     public void gameplayCommands(){
