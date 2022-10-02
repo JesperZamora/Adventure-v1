@@ -1,5 +1,5 @@
 public class Adventure {
-    private  Map map;
+    private Map map;
     private Player player;
 
     public Adventure() {

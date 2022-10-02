@@ -1,5 +1,6 @@
 public class Map {
     private Room starterRoom;
+
     public Map() {
         Room room1 = new Room("Room 1", "There is nothing but two doors");
         Room room2 = new Room("Room 2", "There is very dark in room but there is one door");

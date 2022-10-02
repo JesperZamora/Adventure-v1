@@ -29,7 +29,7 @@ public class UserInterface {
     }
 
     public void userCommands(String userChoice) {
-        switch(userChoice) {
+        switch (userChoice) {
             case "go north", "north", "n":
                 System.out.println("Going north...");
                 isPossible = adventure.getPlayer().goNorth();
@@ -52,7 +52,7 @@ public class UserInterface {
                 break;
             case "look", "l":
                 System.out.println("Looking around...");
-                System.out.println("Found "+adventure.getPlayer().getCurrentRoom().getItems());
+                System.out.println("Found " + adventure.getPlayer().getCurrentRoom().getItems());
                 break;
             case "take", "t":
                 System.out.println("Do you want to take an item?");
@@ -93,7 +93,7 @@ public class UserInterface {
 
     public void checkIsPossibleToTakeItem(boolean isPossibleToTakeItem) {
         if (isPossibleToTakeItem) {
-            System.out.println("Item added to your inventory!");
+            System.out.println(takeItem + " added to your inventory!");
         } else {
             System.out.println("There is no such item to take around here");
         }
@@ -101,26 +101,26 @@ public class UserInterface {
 
     public void checkIsPossibleToDropItem(boolean isPossibleToDropItem) {
         if (isPossibleToDropItem) {
-            System.out.println("Item dropped in " + adventure.getPlayer().roomNumber());
+            System.out.println(dropItem + " dropped in " + adventure.getPlayer().roomNumber());
         } else {
             System.out.println("You do not have that item!");
         }
     }
 
-    public void gameplayCommands(){
+    public void gameplayCommands() {
         System.out.println("""
                 Movement commands:
                 "Go North"   (N) - move north
                 "Go South"   (S) - move south
                 "Go East"    (E) - move east
                 "Go West     (W) - move west
-                
+                                
                 In-game commands:
-                "Look"       (L) - to look arounds
+                "Look"       (L) - to look around
                 "Take"       (T) - take an item
                 "Drop"       (D) - drop item
                 "Inventory"  (I) - show inventory
-                
+                                
                 Other commands:
                 "Help"       (H) - list of commands
                 "Exit"           - exit gameplay

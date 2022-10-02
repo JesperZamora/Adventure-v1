@@ -15,21 +15,20 @@ public class Room {
         items.add(newItem);
     }
 
-    public ArrayList<Item> getItems(){
+    public ArrayList<Item> getItems() {
         return items;
     }
 
-    public Item findRoomItems (String name) {
+    public Item findRoomItems(String name) {
         for (Item i : items) {
-            if(i.getItemName().equals(name)) {
+            if (i.getItemName().equals(name)) {
                 return i;
             }
         }
         return null;
     }
 
-
-    public Room(String nameOfRoom, String descriptionOfRoom){
+    public Room(String nameOfRoom, String descriptionOfRoom) {
         this.nameOfRoom = nameOfRoom;
         this.descriptionOfRoom = descriptionOfRoom;
     }
@@ -37,12 +36,15 @@ public class Room {
     public void setNorth(Room north) {
         this.north = north;
     }
-    public void setEast (Room east) {
+
+    public void setEast(Room east) {
         this.east = east;
     }
+
     public void setSouth(Room south) {
         this.south = south;
     }
+
     public void setWest(Room west) {
         this.west = west;
     }
@@ -50,18 +52,23 @@ public class Room {
     public Room getSouth() {
         return south;
     }
+
     public Room getEast() {
         return east;
     }
+
     public Room getWest() {
         return west;
     }
+
     public Room getNorth() {
         return north;
     }
-    public String getDescriptionOfRoom () {
+
+    public String getDescriptionOfRoom() {
         return descriptionOfRoom;
     }
+
     public String getNameOfRoom() {
         return nameOfRoom;
     }

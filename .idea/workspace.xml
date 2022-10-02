@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Ændret metode for takeItemInRoom fra void til boolean, da den ud skrev strings. Dette er rettet til at interface gør det i stedet.">
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Rettet dropItem også, så metoden ikke giver udskriver en string, men interface gør det i stedet.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664705436826</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Rettet dropItem også, så metoden ikke giver udskriver en string, men interface gør det i stedet.">
+      <created>1664705906030</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664705906030</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +206,7 @@
     <MESSAGE value="Rettet lidt i interface, så bruger får info hvilket de starter i. Har opdateret switch med take, drop og inventory. Har lavet om så &quot;look&quot; metoder viser items fundet i rummet. Der er lavet findItem metode i room klassen, take metode i player klassen + add metode til player klasses arraylist(inventory)." />
     <MESSAGE value="Lavet drop metode. Kunne ikke få det til at fungere med description med itemDescription. Så den er fjernet for nu." />
     <MESSAGE value="Ændret metode for takeItemInRoom fra void til boolean, da den ud skrev strings. Dette er rettet til at interface gør det i stedet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ændret metode for takeItemInRoom fra void til boolean, da den ud skrev strings. Dette er rettet til at interface gør det i stedet." />
+    <MESSAGE value="Rettet dropItem også, så metoden ikke giver udskriver en string, men interface gør det i stedet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rettet dropItem også, så metoden ikke giver udskriver en string, men interface gør det i stedet." />
   </component>
 </project>

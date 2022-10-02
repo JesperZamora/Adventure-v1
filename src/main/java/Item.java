@@ -1,6 +1,6 @@
 public class Item {
     private String itemName;
-    private String itemDescription;
+    //private String itemDescription;
 
     public Item(String itemName) {
         this.itemName = itemName;
@@ -10,8 +10,7 @@ public class Item {
         return itemName;
     }
 
-
-    public String toString(){
+    public String toString() {
         return itemName;
     }
 

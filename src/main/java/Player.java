@@ -5,7 +5,7 @@ public class Player {
 
     ArrayList<Item> inventory = new ArrayList<>();
 
-    public boolean takeItemInRoom (String itemName){
+    public boolean takeItemInRoom(String itemName) {
         Item takeItem = currentRoom.findRoomItems(itemName);
         if (takeItem != null) {
             addItemtoInventory(itemName);
@@ -16,7 +16,7 @@ public class Player {
         }
     }
 
-    public boolean dropItemInRoom (String itemName) {
+    public boolean dropItemInRoom(String itemName) {
         Item dropItem = findInventoryItems(itemName);
         if (dropItem != null) {
             currentRoom.addItem(itemName);
@@ -29,8 +29,8 @@ public class Player {
     }
 
     public Item findInventoryItems(String name) {
-        for(Item i : inventory) {
-            if(i.getItemName().equals(name)) {
+        for (Item i : inventory) {
+            if (i.getItemName().equals(name)) {
                 return i;
             }
         }
@@ -38,7 +38,7 @@ public class Player {
     }
 
     public void addItemtoInventory(String itemName) {
-        Item newItem = new Item (itemName);
+        Item newItem = new Item(itemName);
         inventory.add(newItem);
     }
 
