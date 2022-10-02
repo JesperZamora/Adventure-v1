@@ -16,14 +16,15 @@ public class Player {
         }
     }
 
-    public void dropItemInRoom (String itemName) {
+    public boolean dropItemInRoom (String itemName) {
         Item dropItem = findInventoryItems(itemName);
-        if (dropItem == null) {
-            System.out.println("You do not have that item");
-        } else {
+        if (dropItem != null) {
             currentRoom.addItem(itemName);
             inventory.remove(dropItem);
-            System.out.println(itemName + " dropped in " + currentRoom.getNameOfRoom());
+            return true;
+        } else {
+            return false;
+
         }
     }
 
