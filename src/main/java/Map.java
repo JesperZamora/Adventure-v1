@@ -3,7 +3,7 @@ public class Map {
 
     public Map() {
         Room room1 = new Room("Room 1", "There is nothing but two doors");
-        Room room2 = new Room("Room 2", "There is very dark in room but there is one door");
+        Room room2 = new Room("Room 2", "There is very dark in the room but there is one door");
         Room room3 = new Room("Room 3", "There are paintings on the wall and one door");
         Room room4 = new Room("Room 4", "There is nothing in the room but one door");
         Room room5 = new Room("Room 5", "There is a chest");

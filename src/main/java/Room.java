@@ -28,6 +28,17 @@ public class Room {
         return null;
     }
 
+    public void deleteItem(Item item) {
+        int j = -1;
+        for (int i = 0; i <items.size(); i++) {
+            if (items.get(i) == item) {
+                j = i;
+            }
+            items.remove(j);
+        }
+    }
+
+
     public Room(String nameOfRoom, String descriptionOfRoom) {
         this.nameOfRoom = nameOfRoom;
         this.descriptionOfRoom = descriptionOfRoom;

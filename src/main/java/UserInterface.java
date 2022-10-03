@@ -52,7 +52,8 @@ public class UserInterface {
                 break;
             case "look", "l":
                 System.out.println("Looking around...");
-                System.out.println("Found " + adventure.currentRoomGetItems());
+                System.out.println(adventure.look());
+                System.out.println("Found " + adventure.getCurrentRoom().getItems());
                 break;
             case "take", "t":
                 System.out.println("Do you want to take an item?");

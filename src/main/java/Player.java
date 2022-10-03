@@ -8,7 +8,7 @@ public class Player {
         Item takeItem = currentRoom.findRoomItems(itemName);
         if (takeItem != null) {
             addItemtoInventory(itemName);
-            currentRoom.getItems().remove(takeItem);
+            currentRoom.deleteItem(takeItem);
             return true;
         } else {
             return false;
