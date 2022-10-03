@@ -7,7 +7,7 @@ public class Player {
     public boolean takeItemInRoom(String itemName) {
         Item takeItem = currentRoom.findRoomItems(itemName);
         if (takeItem != null) {
-            addItemtoInventory(itemName);
+            addItemtoInventory(takeItem);
             currentRoom.deleteItem(takeItem);
             return true;
         } else {
@@ -18,7 +18,7 @@ public class Player {
     public boolean dropItemInRoom(String itemName) {
         Item dropItem = findInventoryItems(itemName);
         if (dropItem != null) {
-            currentRoom.addItem(itemName);
+            currentRoom.getItems().add(dropItem);
             inventory.remove(dropItem);
             return true;
         } else {
@@ -28,16 +28,15 @@ public class Player {
 
     public Item findInventoryItems(String name) {
         for (Item i : inventory) {
-            if (i.getItemName().equals(name)) {
+            if (i.getItemName().contains(name)) {
                 return i;
             }
         }
         return null;
     }
 
-    public void addItemtoInventory(String itemName) {
-        Item newItem = new Item(itemName);
-        inventory.add(newItem);
+    public void addItemtoInventory(Item item) {
+        inventory.add(item);
     }
 
     public ArrayList<Item> getInventory() {
@@ -59,6 +58,8 @@ public class Player {
     public String roomNumber() {
         return currentRoom.getNameOfRoom();
     }
+
+
     public boolean goNorth(){
         if(currentRoom.getNorth() != null) {
             setCurrentRoom(getCurrentRoom().getNorth());
@@ -94,6 +95,8 @@ public class Player {
             return false;
         }
     }
+
+
 }
 
 /*

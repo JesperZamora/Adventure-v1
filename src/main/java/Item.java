@@ -1,9 +1,10 @@
 public class Item {
     private String itemName;
-    //private String itemDescription;
+    private String itemDescription;
 
-    public Item(String itemName) {
+    public Item(String itemName, String itemDescription) {
         this.itemName = itemName;
+        this.itemDescription = itemDescription;
     }
 
     public String getItemName() {
@@ -11,7 +12,8 @@ public class Item {
     }
 
     public String toString() {
-        return itemName;
+        return itemName +" "+ itemDescription;
+
     }
 
 

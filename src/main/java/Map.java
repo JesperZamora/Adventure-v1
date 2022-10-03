@@ -12,15 +12,15 @@ public class Map {
         Room room8 = new Room("Room 8", "There is a panda and two doors");
         Room room9 = new Room("Room 9", "There is another panda");
 
-        room1.addItem("lamp");
-        room2.addItem("oil");
-        room2.addItem("lighter");
-        room3.addItem("key");
-        room3.addItem("wick");
-        room3.addItem("key");
-        room5.addItem("chest");
-        room9.addItem("sword");
-        room7.addItem("shield");
+        room1.addItem("lamp", "looks old");
+        room2.addItem("oil", "loks greasy");
+        room2.addItem("lighter", "stil works");
+        room3.addItem("key", "looks rusty");
+        room3.addItem("wick", "is nearly burned out");
+        room3.addItem("cloth", "is dirty");
+        room5.addItem("chest", "looks ancient");
+        room9.addItem("sword", "is not that sharp, but looks pointy");
+        room7.addItem("shield", "looks shiny and royal");
 
         room1.setEast(room2);
         room1.setSouth(room4);

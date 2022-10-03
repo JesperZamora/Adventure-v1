@@ -39,17 +39,22 @@ public class Adventure {
     public String roomNumber() {
         return player.roomNumber();
     }
+
     public boolean goNorth() {
         return player.goNorth();
     }
+
     public boolean goSouth() {
         return player.goSouth();
     }
+
     public boolean goEast() {
         return player.goEast();
     }
+
     public boolean goWest() {
         return player.goWest();
     }
+
 
 }

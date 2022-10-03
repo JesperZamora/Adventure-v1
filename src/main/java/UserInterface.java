@@ -53,7 +53,7 @@ public class UserInterface {
             case "look", "l":
                 System.out.println("Looking around...");
                 System.out.println(adventure.look());
-                System.out.println("Found " + adventure.getCurrentRoom().getItems());
+                System.out.println("Found: " + adventure.currentRoomGetItems());
                 break;
             case "take", "t":
                 System.out.println("Do you want to take an item?");
@@ -69,7 +69,7 @@ public class UserInterface {
                 break;
             case "inventory", "i":
                 System.out.println("Your inventory contains...");
-                System.out.println(adventure.getInventory());
+                System.out.println(adventure.currentRoomGetItems());
                 break;
             case "help", "h":
                 gameplayCommands();

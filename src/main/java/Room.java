@@ -10,14 +10,15 @@ public class Room {
 
     private ArrayList<Item> items = new ArrayList<>();
 
-    public void addItem(String itemName) {
-        Item newItem = new Item(itemName);
+    public void addItem(String itemName, String itemDescription) {
+        Item newItem = new Item(itemName, itemDescription);
         items.add(newItem);
     }
 
     public ArrayList<Item> getItems() {
         return items;
     }
+
 
     public Item findRoomItems(String name) {
         for (Item i : items) {
