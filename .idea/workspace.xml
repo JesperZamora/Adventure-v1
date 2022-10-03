@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Sat metoder i adventure klassn (controller) fra player klassen. Så userInterface giver info til controlleren.">
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="rettelse i interface og main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
       <updated>1664186542367</updated>
       <workItem from="1664186543839" duration="2791000" />
       <workItem from="1664286652664" duration="1922000" />
-      <workItem from="1664777599246" duration="2772000" />
+      <workItem from="1664777599246" duration="7038000" />
     </task>
     <task id="LOCAL-00001" summary="Klasser oprettet">
       <created>1664186711682</created>
@@ -183,7 +186,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664787551285</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="rettelse i interface og main">
+      <created>1664788031226</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1664788031226</updated>
+    </task>
+    <task id="LOCAL-00019" summary="rettelse i interface og main">
+      <created>1664788087531</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1664788087531</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +235,7 @@
     <MESSAGE value="Rettet dropItem også, så metoden ikke giver udskriver en string, men interface gør det i stedet." />
     <MESSAGE value="små rettelser" />
     <MESSAGE value="Sat metoder i adventure klassn (controller) fra player klassen. Så userInterface giver info til controlleren." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sat metoder i adventure klassn (controller) fra player klassen. Så userInterface giver info til controlleren." />
+    <MESSAGE value="rettelse i interface og main" />
+    <option name="LAST_COMMIT_MESSAGE" value="rettelse i interface og main" />
   </component>
 </project>

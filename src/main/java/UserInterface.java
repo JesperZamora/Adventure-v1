@@ -32,27 +32,27 @@ public class UserInterface {
         switch (userChoice) {
             case "go north", "north", "n":
                 System.out.println("Going north...");
-                isPossible = adventure.getGoDirection();
+                isPossible = adventure.goNorth();
                 checkIsPossible(isPossible);
                 break;
             case "go south", "south", "s":
                 System.out.println("Going south...");
-                isPossible = adventure.getGoDirection();
+                isPossible = adventure.goSouth();
                 checkIsPossible(isPossible);
                 break;
             case "go east", "east", "e":
                 System.out.println("Going east...");
-                isPossible = adventure.getGoDirection();;
+                isPossible = adventure.goEast();;
                 checkIsPossible(isPossible);
                 break;
             case "go west", "west", "w":
                 System.out.println("Going west...");
-                isPossible = adventure.getGoDirection();
+                isPossible = adventure.goWest();
                 checkIsPossible(isPossible);
                 break;
             case "look", "l":
                 System.out.println("Looking around...");
-                System.out.println("Found " + adventure.getCurrentRoom().getItems());
+                System.out.println("Found " + adventure.currentRoomGetItems());
                 break;
             case "take", "t":
                 System.out.println("Do you want to take an item?");

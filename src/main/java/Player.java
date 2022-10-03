@@ -59,25 +59,41 @@ public class Player {
     public String roomNumber() {
         return currentRoom.getNameOfRoom();
     }
-
-    public boolean goDirection (){
+    public boolean goNorth(){
         if(currentRoom.getNorth() != null) {
             setCurrentRoom(getCurrentRoom().getNorth());
-            return true;
-        } else if (currentRoom.getSouth() != null) {
-            setCurrentRoom(getCurrentRoom().getSouth());
-            return true;
-        } else if (currentRoom.getEast() != null) {
-            setCurrentRoom(getCurrentRoom().getEast());
-            return true;
-        } else if (currentRoom.getWest() != null) {
-            setCurrentRoom(getCurrentRoom().getWest());
             return true;
         } else {
             return false;
         }
     }
 
+    public boolean goSouth(){
+        if(currentRoom.getSouth() != null) {
+            setCurrentRoom(getCurrentRoom().getSouth());
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean goEast(){
+        if(currentRoom.getEast() != null) {
+            setCurrentRoom(getCurrentRoom().getEast());
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean goWest(){
+        if(currentRoom.getWest() != null) {
+            setCurrentRoom(getCurrentRoom().getWest());
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 /*

@@ -13,12 +13,12 @@ public class Adventure {
     //UserInterface -> Adventure -> Player -> Room -> Items
 
 
-    public Room getCurrentRoom(){
+    public Room getCurrentRoom() {
         return player.getCurrentRoom();
     }
 
-    public boolean getGoDirection(){
-        return player.goDirection();
+    public ArrayList<Item> currentRoomGetItems() {
+        return player.getCurrentRoom().getItems();
     }
 
     public boolean takeItem(String itemName) {
@@ -39,4 +39,17 @@ public class Adventure {
     public String roomNumber() {
         return player.roomNumber();
     }
+    public boolean goNorth() {
+        return player.goNorth();
+    }
+    public boolean goSouth() {
+        return player.goSouth();
+    }
+    public boolean goEast() {
+        return player.goEast();
+    }
+    public boolean goWest() {
+        return player.goWest();
+    }
+
 }
