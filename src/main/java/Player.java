@@ -2,8 +2,7 @@ import java.util.ArrayList;
 
 public class Player {
     private Room currentRoom;
-
-    ArrayList<Item> inventory = new ArrayList<>();
+    private ArrayList<Item> inventory = new ArrayList<>();
 
     public boolean takeItemInRoom(String itemName) {
         Item takeItem = currentRoom.findRoomItems(itemName);
@@ -24,7 +23,6 @@ public class Player {
             return true;
         } else {
             return false;
-
         }
     }
 
@@ -62,42 +60,23 @@ public class Player {
         return currentRoom.getNameOfRoom();
     }
 
-    public boolean goNorth() {
-        if (currentRoom.getNorth() != null) {
+    public boolean goDirection (){
+        if(currentRoom.getNorth() != null) {
             setCurrentRoom(getCurrentRoom().getNorth());
             return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean goSouth() {
-        if (currentRoom.getSouth() != null) {
+        } else if (currentRoom.getSouth() != null) {
             setCurrentRoom(getCurrentRoom().getSouth());
             return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean goEast() {
-        if (currentRoom.getEast() != null) {
+        } else if (currentRoom.getEast() != null) {
             setCurrentRoom(getCurrentRoom().getEast());
             return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean goWest() {
-        if (currentRoom.getWest() != null) {
+        } else if (currentRoom.getWest() != null) {
             setCurrentRoom(getCurrentRoom().getWest());
             return true;
         } else {
             return false;
         }
     }
-
 
 }
 

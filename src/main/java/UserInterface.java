@@ -17,8 +17,8 @@ public class UserInterface {
         gameplayCommands();
         System.out.println("----------------------------------------\n");
         //Starting point
-        System.out.println("You are now in " + adventure.getPlayer().roomNumber());
-        System.out.println(adventure.getPlayer().look());
+        System.out.println("You are now in " + adventure.roomNumber());
+        System.out.println(adventure.look());
 
         userChoice = "";
         while (!userChoice.equals("exit")) {
@@ -32,43 +32,43 @@ public class UserInterface {
         switch (userChoice) {
             case "go north", "north", "n":
                 System.out.println("Going north...");
-                isPossible = adventure.getPlayer().goNorth();
+                isPossible = adventure.getGoDirection();
                 checkIsPossible(isPossible);
                 break;
             case "go south", "south", "s":
                 System.out.println("Going south...");
-                isPossible = adventure.getPlayer().goSouth();
+                isPossible = adventure.getGoDirection();
                 checkIsPossible(isPossible);
                 break;
             case "go east", "east", "e":
                 System.out.println("Going east...");
-                isPossible = adventure.getPlayer().goEast();
+                isPossible = adventure.getGoDirection();;
                 checkIsPossible(isPossible);
                 break;
             case "go west", "west", "w":
                 System.out.println("Going west...");
-                isPossible = adventure.getPlayer().goWest();
+                isPossible = adventure.getGoDirection();
                 checkIsPossible(isPossible);
                 break;
             case "look", "l":
                 System.out.println("Looking around...");
-                System.out.println("Found " + adventure.getPlayer().getCurrentRoom().getItems());
+                System.out.println("Found " + adventure.getCurrentRoom().getItems());
                 break;
             case "take", "t":
                 System.out.println("Do you want to take an item?");
                 takeItem = input.nextLine();
-                isPossibleToTakeItem = adventure.getPlayer().takeItemInRoom(takeItem);
+                isPossibleToTakeItem = adventure.takeItem(takeItem);
                 checkIsPossibleToTakeItem(isPossibleToTakeItem);
                 break;
             case "drop", "d":
                 System.out.println("Which item do you want to drop?");
                 dropItem = input.nextLine();
-                isPossibleToDropItem = adventure.getPlayer().dropItemInRoom(dropItem);
+                isPossibleToDropItem = adventure.dropItem(dropItem);
                 checkIsPossibleToDropItem(isPossibleToDropItem);
                 break;
             case "inventory", "i":
                 System.out.println("Your inventory contains...");
-                System.out.println(adventure.getPlayer().getInventory());
+                System.out.println(adventure.getInventory());
                 break;
             case "help", "h":
                 gameplayCommands();
@@ -84,8 +84,8 @@ public class UserInterface {
 
     public void checkIsPossible(boolean isPossible) {
         if (isPossible) {
-            System.out.println("You are now in " + adventure.getPlayer().roomNumber());
-            System.out.println(adventure.getPlayer().look());
+            System.out.println("You are now in " + adventure.roomNumber());
+            System.out.println(adventure.look());
         } else {
             System.out.println("You can not go that way!");
         }
@@ -101,7 +101,7 @@ public class UserInterface {
 
     public void checkIsPossibleToDropItem(boolean isPossibleToDropItem) {
         if (isPossibleToDropItem) {
-            System.out.println(dropItem + " dropped in " + adventure.getPlayer().roomNumber());
+            System.out.println(dropItem + " dropped in " + adventure.roomNumber());
         } else {
             System.out.println("You do not have that item!");
         }

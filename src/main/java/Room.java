@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Room {
-    private final String nameOfRoom;
-    private final String descriptionOfRoom;
+    private String nameOfRoom;
+    private String descriptionOfRoom;
     private Room north;
     private Room south;
     private Room east;

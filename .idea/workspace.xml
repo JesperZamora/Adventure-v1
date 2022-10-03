@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Rettet dropItem også, så metoden ikke giver udskriver en string, men interface gør det i stedet.">
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="små rettelser">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
@@ -68,6 +66,7 @@
       <updated>1664186542367</updated>
       <workItem from="1664186543839" duration="2791000" />
       <workItem from="1664286652664" duration="1922000" />
+      <workItem from="1664777599246" duration="2103000" />
     </task>
     <task id="LOCAL-00001" summary="Klasser oprettet">
       <created>1664186711682</created>
@@ -174,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664705906030</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="små rettelser">
+      <created>1664706819804</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664706819804</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +213,7 @@
     <MESSAGE value="Lavet drop metode. Kunne ikke få det til at fungere med description med itemDescription. Så den er fjernet for nu." />
     <MESSAGE value="Ændret metode for takeItemInRoom fra void til boolean, da den ud skrev strings. Dette er rettet til at interface gør det i stedet." />
     <MESSAGE value="Rettet dropItem også, så metoden ikke giver udskriver en string, men interface gør det i stedet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rettet dropItem også, så metoden ikke giver udskriver en string, men interface gør det i stedet." />
+    <MESSAGE value="små rettelser" />
+    <option name="LAST_COMMIT_MESSAGE" value="små rettelser" />
   </component>
 </project>
