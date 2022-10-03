@@ -6,9 +6,9 @@ public class UserInterface {
     private String userChoice, takeItem, dropItem;
     private boolean isPossible, isPossibleToTakeItem, isPossibleToDropItem;
 
-    public UserInterface() {
+    public UserInterface(Adventure a) {
         input = new Scanner(System.in);
-        adventure = new Adventure();
+        adventure = a;
     }
 
     public void startProgram() {
