@@ -7,4 +7,6 @@ private int healthPoints;
         this.healthPoints = healthPoints;
     }
 
+
+
 }

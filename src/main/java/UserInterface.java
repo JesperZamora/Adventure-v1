@@ -71,6 +71,9 @@ public class UserInterface {
                 System.out.println("Your inventory contains...");
                 System.out.println(adventure.getInventory());
                 break;
+            case "health", "hp":
+                System.out.println("Your current health: "+ adventure.getHealth());
+                break;
             case "help", "h":
                 gameplayCommands();
                 break;

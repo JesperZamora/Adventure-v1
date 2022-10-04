@@ -12,7 +12,6 @@ public class Adventure {
 
     //UserInterface -> Adventure -> Player -> Room -> Items
 
-
     public Room getCurrentRoom() {
         return player.getCurrentRoom();
     }
@@ -54,6 +53,10 @@ public class Adventure {
 
     public boolean goWest() {
         return player.goWest();
+    }
+
+    public int getHealth() {
+        return player.getPlayerHealth();
     }
 
 

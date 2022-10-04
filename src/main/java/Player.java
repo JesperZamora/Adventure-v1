@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 
 public class Player {
-    private Room currentRoom;
+    private Room currentRoom; 
     private ArrayList<Item> inventory = new ArrayList<>();
+    private int playerHealth = 100;
 
     public boolean takeItemInRoom(String itemName) {
         Item takeItem = currentRoom.findRoomItems(itemName);
@@ -33,6 +34,16 @@ public class Player {
             }
         }
         return null;
+    }
+
+
+
+    public int updatePlayerHealth(int healthPoints) {
+        return playerHealth += healthPoints;
+    }
+
+    public int getPlayerHealth() {
+        return playerHealth;
     }
 
 
