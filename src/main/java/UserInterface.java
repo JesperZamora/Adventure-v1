@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner input;
     private Adventure adventure;
-    private String userChoice, takeItem, dropItem;
-    private boolean isPossible, isPossibleToTakeItem, isPossibleToDropItem;
+    private String userChoice, takeItem, dropItem, eatItem;
+    private boolean isPossible, isPossibleToTakeItem, isPossibleToDropItem, isPossibleToEatItem;
 
     public UserInterface(Adventure a) {
         input = new Scanner(System.in);
@@ -67,12 +67,18 @@ public class UserInterface {
                 isPossibleToDropItem = adventure.dropItem(dropItem);
                 checkIsPossibleToDropItem(isPossibleToDropItem);
                 break;
+            case "eat":
+                System.out.println("Which food do you want to eat?");
+                eatItem = input.nextLine();
+                isPossibleToEatItem = adventure.eatItem(eatItem);
+                checkIsPossibleToEatItem(isPossibleToEatItem);
+                break;
             case "inventory", "i":
                 System.out.println("Your inventory contains...");
                 System.out.println(adventure.getInventory());
                 break;
             case "health", "hp":
-                System.out.println("Your current health: "+ adventure.getHealth());
+                System.out.println("Your current health: " + adventure.getHealth());
                 break;
             case "help", "h":
                 gameplayCommands();
@@ -108,6 +114,14 @@ public class UserInterface {
             System.out.println(dropItem + " dropped in " + adventure.roomNumber());
         } else {
             System.out.println("You do not have that item!");
+        }
+    }
+
+    public void checkIsPossibleToEatItem(boolean isPossibleToEatItem) {
+        if(isPossibleToEatItem) {
+            System.out.println("You have eat a " + eatItem + " and your health is now " + adventure.getHealth());
+        } else {
+            System.out.println("You can not eat that");
         }
     }
 

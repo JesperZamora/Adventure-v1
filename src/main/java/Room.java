@@ -44,7 +44,6 @@ public class Room {
         }
     }
 
-
     public Room(String nameOfRoom, String descriptionOfRoom) {
         this.nameOfRoom = nameOfRoom;
         this.descriptionOfRoom = descriptionOfRoom;

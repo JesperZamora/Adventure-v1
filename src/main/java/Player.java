@@ -9,7 +9,7 @@ public class Player {
         Item takeItem = currentRoom.findRoomItems(itemName);
         if (takeItem != null) {
             addItemtoInventory(takeItem);
-            currentRoom.deleteItem(takeItem);
+            currentRoom.getItems().remove(takeItem);
             return true;
         } else {
             return false;
@@ -36,7 +36,9 @@ public class Player {
         return null;
     }
 
-
+    public int getFoodHealth(Food food) {
+        return food.getHealthPoints();
+    }
 
     public int updatePlayerHealth(int healthPoints) {
         return playerHealth += healthPoints;
@@ -46,6 +48,16 @@ public class Player {
         return playerHealth;
     }
 
+    public boolean eatItem(String foodName) {
+        Item foodItem = findInventoryItems(foodName);
+        if (foodItem != null) {
+            updatePlayerHealth(getFoodHealth((Food) foodItem));
+            inventory.remove(foodItem);
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public void addItemtoInventory(Item item) {
         inventory.add(item);

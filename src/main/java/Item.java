@@ -15,6 +15,4 @@ public class Item {
         return itemName +" "+ itemDescription;
 
     }
-
-
 }
