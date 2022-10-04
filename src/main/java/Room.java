@@ -22,7 +22,7 @@ public class Room {
 
     public Item findRoomItems(String name) {
         for (Item i : items) {
-            if (i.getItemName().equals(name)) {
+            if (i.getItemName().contains(name)) {
                 return i;
             }
         }

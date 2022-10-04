@@ -69,7 +69,7 @@ public class UserInterface {
                 break;
             case "inventory", "i":
                 System.out.println("Your inventory contains...");
-                System.out.println(adventure.currentRoomGetItems());
+                System.out.println(adventure.getInventory());
                 break;
             case "help", "h":
                 gameplayCommands();
