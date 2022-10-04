@@ -8,12 +8,12 @@ public class Map {
         Room room4 = new Room("Room 4", "There is nothing in the room but one door");
         Room room5 = new Room("Room 5", "There is a chest");
         Room room6 = new Room("Room 6", "There is nothing but a door");
-        Room room7 = new Room("Room 7", "Nothing but on door");
+        Room room7 = new Room("Room 7", "Nothing but a door");
         Room room8 = new Room("Room 8", "There is a panda and two doors");
         Room room9 = new Room("Room 9", "There is another panda");
 
         room1.addItem("lamp", "looks old");
-        room2.addItem("oil", "looks greasy");
+        room2.addItem("oil", "loks greasy");
         room2.addItem("lighter", "stil works");
         room3.addItem("key", "looks rusty");
         room3.addItem("wick", "is nearly burned out");
