@@ -41,7 +41,9 @@ public class Player {
     }
 
     public int updatePlayerHealth(int healthPoints) {
-        return playerHealth += healthPoints;
+        playerHealth += healthPoints;
+        playerHealth = Integer.min(playerHealth, 100);
+        return playerHealth;
     }
 
     public int getPlayerHealth() {
