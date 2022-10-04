@@ -12,6 +12,7 @@ public class Map {
         Room room8 = new Room("Room 8", "There is a panda and two doors");
         Room room9 = new Room("Room 9", "There is another panda");
 
+        // Items
         room1.addItem("lamp", "looks old");
         room2.addItem("oil", "loks greasy");
         room2.addItem("lighter", "stil works");
@@ -21,6 +22,14 @@ public class Map {
         room5.addItem("chest", "looks ancient");
         room9.addItem("sword", "is not that sharp, but looks pointy");
         room7.addItem("shield", "looks shiny and royal");
+
+        // Food items
+        room1.addFood("apple", "looks juicy", 20);
+        room2.addFood("rat", "looks nasty", -75);
+        room3.addFood("milk", "looks old", -10);
+        room4.addFood("banana", "looks fresh", 25);
+        room5.addFood("durum", "looks good", 75);
+        room7.addFood("fish", "smells a bit", -50);
 
         room1.setEast(room2);
         room1.setSouth(room4);

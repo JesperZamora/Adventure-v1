@@ -15,6 +15,11 @@ public class Room {
         items.add(newItem);
     }
 
+    public void addFood(String foodName, String foodDescription, int healthPoints) {
+        Item newFood = new Food(foodName, foodDescription, healthPoints);
+        items.add(newFood);
+    }
+
     public ArrayList<Item> getItems() {
         return items;
     }
