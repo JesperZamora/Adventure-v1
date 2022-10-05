@@ -119,7 +119,7 @@ public class UserInterface {
 
     public void checkIsPossibleToEatItem(boolean isPossibleToEatItem) {
         if(isPossibleToEatItem) {
-            System.out.println("You have eat a " + eatItem + " and your health is now " + adventure.getHealth());
+            System.out.println("You have eaten " + eatItem + " and your health is now " + adventure.getHealth());
         } else {
             System.out.println("You can not eat that");
         }

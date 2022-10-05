@@ -24,7 +24,6 @@ public class Room {
         return items;
     }
 
-
     public Item findRoomItems(String name) {
         for (Item i : items) {
             if (i.getItemName().equals(name)) {

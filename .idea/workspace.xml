@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Added eat command, eatitem and update player health method">
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Tilføjeet food i map klassen +  addFood metode i room klassen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
   <component name="RunManager">
@@ -215,12 +217,12 @@
       <option name="project" value="LOCAL" />
       <updated>1664799284976</updated>
     </task>
-    <task id="LOCAL-00022" summary="Added eat command, eatitem and update player health method">
-      <created>1664890794249</created>
+    <task id="LOCAL-00022" summary="rettet tekst i map">
+      <created>1664882050522</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1664890794249</updated>
+      <updated>1664882050522</updated>
     </task>
     <option name="localTasksCounter" value="23" />
     <servers />
@@ -259,7 +261,7 @@
     <MESSAGE value="rettelse i interface og main" />
     <MESSAGE value="Rettet player go metode tilbage den den ikke fungerede ordenligt og lavet gettter i adventure." />
     <MESSAGE value="små rettelser" />
-    <MESSAGE value="Added eat command, eatitem and update player health method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added eat command, eatitem and update player health method" />
+    <MESSAGE value="rettet tekst i map" />
+    <option name="LAST_COMMIT_MESSAGE" value="rettet tekst i map" />
   </component>
 </project>

@@ -53,9 +53,13 @@ public class Player {
     public boolean eatItem(String foodName) {
         Item foodItem = findInventoryItems(foodName);
         if (foodItem != null) {
-            updatePlayerHealth(getFoodHealth((Food) foodItem));
-            inventory.remove(foodItem);
-            return true;
+            if (foodItem instanceof Food) {
+                updatePlayerHealth(getFoodHealth((Food) foodItem));
+                inventory.remove(foodItem);
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
