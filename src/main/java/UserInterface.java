@@ -135,8 +135,10 @@ public class UserInterface {
                                 
                 In-game commands:
                 "Look"       (L) - to look around
+                "Health"     (HP) - show your health
                 "Take"       (T) - take an item
                 "Drop"       (D) - drop item
+                "Eat"            - eat food
                 "Inventory"  (I) - show inventory
                                 
                 Other commands:

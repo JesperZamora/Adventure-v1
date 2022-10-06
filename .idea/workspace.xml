@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Tilføjeet food i map klassen +  addFood metode i room klassen">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +67,7 @@
       <workItem from="1664186543839" duration="2791000" />
       <workItem from="1664286652664" duration="1922000" />
       <workItem from="1664777599246" duration="17875000" />
+      <workItem from="1665052192658" duration="72000" />
     </task>
     <task id="LOCAL-00001" summary="Klasser oprettet">
       <created>1664186711682</created>
