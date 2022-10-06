@@ -51,7 +51,11 @@ public class Map {
         room4.setSouth(room7);
 
         starterRoom = room1;
-
+        room1.addRangedWeapon("bazooka", "huge Bazooka", 2);
+        room3.addMeleeWeapon("knife", "long sharp knife");
+        room5.addRangedWeapon("ak-47", "straight from russia", 10);
+        room6.addMeleeWeapon("shoe", "size 46");
+        room9.addRangedWeapon("pistol", " old desert eagle", 5);
     }
 
     public Room getStarterRoom() {

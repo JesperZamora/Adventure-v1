@@ -19,6 +19,14 @@ public class Room {
         Item newFood = new Food(foodName, foodDescription, healthPoints);
         items.add(newFood);
     }
+    public void addMeleeWeapon(String weaponName, String weaponDescription){
+        Item newMeleeWeapon = new MeleeWeapon(weaponName,weaponDescription);
+        items.add(newMeleeWeapon);
+    }
+    public void addRangedWeapon(String weaponName, String weaponDescription, int ammunition) {
+        Item newRangedWeapon = new RangedWeapon(weaponName, weaponDescription, ammunition);
+        items.add(newRangedWeapon);
+    }
 
     public ArrayList<Item> getItems() {
         return items;
@@ -87,5 +95,4 @@ public class Room {
     public String getNameOfRoom() {
         return nameOfRoom;
     }
-
 }
