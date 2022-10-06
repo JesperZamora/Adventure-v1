@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 public class Player {
-    private Room currentRoom; 
+    private Room currentRoom;
+    private Item currentWeapon;
     private ArrayList<Item> inventory = new ArrayList<>();
     private int playerHealth = 100;
 
@@ -22,6 +23,21 @@ public class Player {
             currentRoom.getItems().add(dropItem);
             inventory.remove(dropItem);
             return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean equipWeapon(String weaponName) {
+        Item equipWeapon = findInventoryItems(weaponName);
+        if (equipWeapon != null) {
+            if (equipWeapon instanceof Weapon) {
+                currentWeapon = equipWeapon;
+                inventory.remove(equipWeapon);
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
@@ -73,6 +89,10 @@ public class Player {
         return inventory;
     }
 
+    public Item getCurrentWeapon() {
+            return currentWeapon;
+    }
+
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
     }
@@ -90,8 +110,8 @@ public class Player {
     }
 
 
-    public boolean goNorth(){
-        if(currentRoom.getNorth() != null) {
+    public boolean goNorth() {
+        if (currentRoom.getNorth() != null) {
             setCurrentRoom(getCurrentRoom().getNorth());
             return true;
         } else {
@@ -99,8 +119,8 @@ public class Player {
         }
     }
 
-    public boolean goSouth(){
-        if(currentRoom.getSouth() != null) {
+    public boolean goSouth() {
+        if (currentRoom.getSouth() != null) {
             setCurrentRoom(getCurrentRoom().getSouth());
             return true;
         } else {
@@ -108,8 +128,8 @@ public class Player {
         }
     }
 
-    public boolean goEast(){
-        if(currentRoom.getEast() != null) {
+    public boolean goEast() {
+        if (currentRoom.getEast() != null) {
             setCurrentRoom(getCurrentRoom().getEast());
             return true;
         } else {
@@ -117,8 +137,8 @@ public class Player {
         }
     }
 
-    public boolean goWest(){
-        if(currentRoom.getWest() != null) {
+    public boolean goWest() {
+        if (currentRoom.getWest() != null) {
             setCurrentRoom(getCurrentRoom().getWest());
             return true;
         } else {

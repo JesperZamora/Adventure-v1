@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner input;
     private Adventure adventure;
-    private String userChoice, takeItem, dropItem, eatItem;
-    private boolean isPossible, isPossibleToTakeItem, isPossibleToDropItem, isPossibleToEatItem;
+    private String userChoice, takeItem, dropItem, eatItem, equipWeapon;
+    private boolean isPossible, isPossibleToTakeItem, isPossibleToDropItem, isPossibleToEatItem, isPossibleToEquipWeapon;
 
     public UserInterface(Adventure a) {
         input = new Scanner(System.in);
@@ -76,9 +76,17 @@ public class UserInterface {
             case "inventory", "i":
                 System.out.println("Your inventory contains...");
                 System.out.println(adventure.getInventory());
+                System.out.println(adventure.getCurrentWeapon());
                 break;
             case "health", "hp":
                 System.out.println("Your current health: " + adventure.getHealth());
+                break;
+            case "equip":
+                System.out.println("Which weapon do want to equip?");
+                equipWeapon = input.nextLine();
+                isPossibleToEquipWeapon = adventure.equipItem(equipWeapon);
+                checkIsPossibleToEquipWeapon(isPossibleToEquipWeapon);
+
                 break;
             case "help", "h":
                 gameplayCommands();
@@ -122,6 +130,12 @@ public class UserInterface {
             System.out.println("You have eaten " + eatItem + " and your health is now " + adventure.getHealth());
         } else {
             System.out.println("You can not eat that");
+        }
+    }
+
+    public void checkIsPossibleToEquipWeapon(boolean isPossibleToEquipWeapon) {
+        if (isPossibleToEquipWeapon) {
+            System.out.println("You have equipped " + equipWeapon);
         }
     }
 

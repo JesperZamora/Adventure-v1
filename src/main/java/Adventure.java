@@ -31,8 +31,16 @@ public class Adventure {
         return player.eatItem(foodName);
     }
 
+    public boolean equipItem(String weaponName) {
+        return player.equipWeapon(weaponName);
+    }
+
     public ArrayList<Item> getInventory() {
         return player.getInventory();
+    }
+
+    public Item getCurrentWeapon(){
+        return player.getCurrentWeapon();
     }
 
     public String look() {
