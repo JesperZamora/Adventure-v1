@@ -43,6 +43,22 @@ public class Player {
         }
     }
 
+    public boolean attack() {
+        if (currentWeapon != null) {
+            if (currentWeapon instanceof RangedWeapon) {
+                if(((RangedWeapon) currentWeapon).getAmmunition()> 0) {
+                    ((RangedWeapon) currentWeapon).setAmmunition(((RangedWeapon) currentWeapon).getAmmunition()-1);
+                    return true;
+                } else {
+                    return false;
+                }
+            } else return false;
+        } else return false;
+    }
+
+
+
+
     public Item findInventoryItems(String name) {
         for (Item i : inventory) {
             if (i.getItemName().contains(name)) {

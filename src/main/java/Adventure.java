@@ -35,6 +35,10 @@ public class Adventure {
         return player.equipWeapon(weaponName);
     }
 
+    public boolean attack() {
+        return player.attack();
+    }
+
     public ArrayList<Item> getInventory() {
         return player.getInventory();
     }

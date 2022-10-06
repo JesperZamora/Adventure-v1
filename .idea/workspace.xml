@@ -71,7 +71,6 @@
       <workItem from="1664186543839" duration="2791000" />
       <workItem from="1664286652664" duration="1922000" />
       <workItem from="1664777599246" duration="17875000" />
-      <workItem from="1665052192658" duration="72000" />
     </task>
     <task id="LOCAL-00001" summary="Klasser oprettet">
       <created>1664186711682</created>
@@ -266,5 +265,16 @@
     <MESSAGE value="små rettelser" />
     <MESSAGE value="rettet tekst i map" />
     <option name="LAST_COMMIT_MESSAGE" value="rettet tekst i map" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Adventure.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

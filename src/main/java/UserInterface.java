@@ -4,7 +4,8 @@ public class UserInterface {
     private Scanner input;
     private Adventure adventure;
     private String userChoice, takeItem, dropItem, eatItem, equipWeapon;
-    private boolean isPossible, isPossibleToTakeItem, isPossibleToDropItem, isPossibleToEatItem, isPossibleToEquipWeapon;
+    private boolean isPossible, isPossibleToTakeItem, isPossibleToDropItem,
+            isPossibleToEatItem, isPossibleToEquipWeapon, isPossibleToAttack;
 
     public UserInterface(Adventure a) {
         input = new Scanner(System.in);
@@ -86,7 +87,10 @@ public class UserInterface {
                 equipWeapon = input.nextLine();
                 isPossibleToEquipWeapon = adventure.equipItem(equipWeapon);
                 checkIsPossibleToEquipWeapon(isPossibleToEquipWeapon);
-
+                break;
+            case "attack":
+                isPossibleToAttack = adventure.attack();
+                checkIsPossibleToAttack();
                 break;
             case "help", "h":
                 gameplayCommands();
@@ -130,6 +134,14 @@ public class UserInterface {
             System.out.println("You have eaten " + eatItem + " and your health is now " + adventure.getHealth());
         } else {
             System.out.println("You can not eat that");
+        }
+    }
+
+    public void checkIsPossibleToAttack() {
+        if (isPossibleToAttack) {
+            System.out.println("You have attacked!");
+        } else {
+            System.out.println("You can not attack!");
         }
     }
 
