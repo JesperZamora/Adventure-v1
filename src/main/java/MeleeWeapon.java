@@ -7,4 +7,9 @@ public class MeleeWeapon extends Weapon {
     public AttackEnum attack() {
         return AttackEnum.MELEE;
     }
+
+    @Override
+    public int ammunitionCount() {
+        return 0;
+    }
 }

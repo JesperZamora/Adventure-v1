@@ -91,6 +91,7 @@ public class UserInterface {
                     switch (attack) {
                         case FIRED:
                             System.out.println("You attacked and fired " + adventure.equippedWeapon() + "!");
+                            System.out.println("Ammunition count: " + adventure.ammunitionCount());
                             break;
                         case MELEE:
                             System.out.println("You attacked and swung " + adventure.equippedWeapon() + "!");

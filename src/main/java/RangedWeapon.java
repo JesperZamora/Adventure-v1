@@ -13,6 +13,10 @@ public class RangedWeapon extends Weapon {
             return AttackEnum.NO_AMMO;
     }
 
+    @Override
+    public int ammunitionCount() {
+        return ammunition;
+    }
 
     @Override
     public String toString() {

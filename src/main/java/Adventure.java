@@ -42,6 +42,10 @@ public class Adventure {
         return player.getCurrentWeapon().getItemName();
     }
 
+    public int ammunitionCount() {
+        return player.ammunitionCount()-1;
+    }
+
 
     public int playerHealth() {
         return player.getPlayerHealth();

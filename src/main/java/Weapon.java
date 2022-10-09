@@ -5,4 +5,6 @@ public abstract class Weapon extends Item{
     }
 
     public abstract AttackEnum attack();
+
+    public abstract int ammunitionCount();
 }

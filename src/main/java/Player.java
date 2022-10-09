@@ -59,6 +59,10 @@ public class Player {
             return AttackEnum.NO_WEAPON_EQUIPPED;
     }
 
+    public int ammunitionCount() {
+        return currentWeapon.ammunitionCount();
+    }
+
     public Item getCurrentWeapon() {
         return currentWeapon;
     }
