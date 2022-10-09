@@ -12,10 +12,11 @@ public class Map {
         Room room8 = new Room("Room 8", "There is a panda and two doors");
         Room room9 = new Room("Room 9", "There is another panda");
 
+
         // Items
         room1.addItem("lamp", "looks old");
-        room2.addItem("oil", "loks greasy");
-        room2.addItem("lighter", "stil works");
+        room2.addItem("oil", "looks greasy");
+        room2.addItem("lighter", "still works");
         room3.addItem("key", "looks rusty");
         room3.addItem("wick", "is nearly burned out");
         room3.addItem("cloth", "is dirty");
@@ -24,13 +25,21 @@ public class Map {
         room7.addItem("shield", "looks shiny and royal");
 
         // Food items
-        room1.addFood("apple", "looks juicy", 20);
-        room2.addFood("rat", "looks nasty", -75);
-        room3.addFood("milk", "looks old", -10);
-        room4.addFood("banana", "looks fresh", 25);
-        room5.addFood("durum", "looks good", 75);
-        room7.addFood("fish", "smells a bit", -50);
+        room1.addFoodItem("apple", "looks juicy", 20);
+        room2.addFoodItem("rat", "looks nasty", -75);
+        room3.addFoodItem("milk", "looks old", -10);
+        room4.addFoodItem("banana", "looks fresh", 25);
+        room5.addFoodItem("durum", "looks good", 75);
+        room7.addFoodItem("fish", "smells a bit", -50);
 
+        // Weapons
+        room1.addRangedWeapon("bazooka", "huge Bazooka", 2);
+        room1.addMeleeWeapon("knife", "long sharp knife");
+        room5.addRangedWeapon("ak-47", "straight from russia", 10);
+        room6.addMeleeWeapon("shoe", "size 46");
+        room9.addRangedWeapon("pistol", " old desert eagle", 5);
+
+        // Setting rooms
         room1.setEast(room2);
         room1.setSouth(room4);
         room4.setNorth(room1);
@@ -50,12 +59,9 @@ public class Map {
         room7.setNorth(room4);
         room4.setSouth(room7);
 
+        // Setting starterRoom
         starterRoom = room1;
-        room1.addRangedWeapon("bazooka", "huge Bazooka", 2);
-        room3.addMeleeWeapon("knife", "long sharp knife");
-        room5.addRangedWeapon("ak-47", "straight from russia", 10);
-        room6.addMeleeWeapon("shoe", "size 46");
-        room9.addRangedWeapon("pistol", " old desert eagle", 5);
+
     }
 
     public Room getStarterRoom() {

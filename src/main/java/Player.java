@@ -2,15 +2,15 @@ import java.util.ArrayList;
 
 public class Player {
     private Room currentRoom;
-    private Item currentWeapon;
+    private Weapon currentWeapon;
+    private int playerHealth = 50;
     private ArrayList<Item> inventory = new ArrayList<>();
-    private int playerHealth = 100;
 
     public boolean takeItemInRoom(String itemName) {
         Item takeItem = currentRoom.findRoomItems(itemName);
         if (takeItem != null) {
-            addItemtoInventory(takeItem);
-            currentRoom.getItems().remove(takeItem);
+            addFoundItemToInventory(takeItem);
+            currentRoom.removeItemFromRoom(takeItem);
             return true;
         } else {
             return false;
@@ -20,44 +20,48 @@ public class Player {
     public boolean dropItemInRoom(String itemName) {
         Item dropItem = findInventoryItems(itemName);
         if (dropItem != null) {
-            currentRoom.getItems().add(dropItem);
-            inventory.remove(dropItem);
+            currentRoom.addItemFromInventory(dropItem);
+            removeItemFromInventory(dropItem);
             return true;
         } else {
             return false;
         }
     }
 
-    public boolean equipWeapon(String weaponName) {
-        Item equipWeapon = findInventoryItems(weaponName);
-        if (equipWeapon != null) {
-            if (equipWeapon instanceof Weapon) {
-                currentWeapon = equipWeapon;
-                inventory.remove(equipWeapon);
+    public boolean eatItem(String foodName) {
+        Item foodItem = findInventoryItems(foodName);
+        if (foodItem != null) {
+            if (foodItem instanceof Food) {
+                updatePlayerHealth(getFoodHealth((Food) foodItem));
+                inventory.remove(foodItem);
                 return true;
-            } else {
-                return false;
             }
-        } else {
-            return false;
         }
+        return false;
     }
 
-    public boolean attack() {
-        if (currentWeapon != null) {
-            if (currentWeapon instanceof RangedWeapon) {
-                if(((RangedWeapon) currentWeapon).getAmmunition()> 0) {
-                    ((RangedWeapon) currentWeapon).setAmmunition(((RangedWeapon) currentWeapon).getAmmunition()-1);
-                    return true;
-                } else {
-                    return false;
-                }
-            } else return false;
-        } else return false;
+    public WeaponEnum equipWeapon(String weaponName) {
+        Item equipWeapon = findInventoryItems(weaponName);
+        if (equipWeapon instanceof Weapon) {
+            currentWeapon = (Weapon) equipWeapon;
+            inventory.remove(equipWeapon);
+            return WeaponEnum.WEAPON;
+        } else if (equipWeapon == null) {
+            return WeaponEnum.NOT_WEAPON;
+        } else
+        return WeaponEnum.NOT_FOUND;
     }
 
+    public AttackEnum attack() {
+        if(currentWeapon != null) {
+            return currentWeapon.attack();
+        } else
+            return AttackEnum.NO_WEAPON_EQUIPPED;
+    }
 
-
+    public Item getCurrentWeapon() {
+        return currentWeapon;
+    }
 
     public Item findInventoryItems(String name) {
         for (Item i : inventory) {
@@ -68,46 +72,47 @@ public class Player {
         return null;
     }
 
-    public int getFoodHealth(Food food) {
-        return food.getHealthPoints();
-    }
-
-    public int updatePlayerHealth(int healthPoints) {
-        playerHealth += healthPoints;
-        playerHealth = Integer.min(playerHealth, 100);
-        return playerHealth;
-    }
-
-    public int getPlayerHealth() {
-        return playerHealth;
-    }
-
-    public boolean eatItem(String foodName) {
-        Item foodItem = findInventoryItems(foodName);
-        if (foodItem != null) {
-            if (foodItem instanceof Food) {
-                updatePlayerHealth(getFoodHealth((Food) foodItem));
-                inventory.remove(foodItem);
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-
-    public void addItemtoInventory(Item item) {
+    public void addFoundItemToInventory(Item item) {
         inventory.add(item);
+    }
+
+    public void removeItemFromInventory(Item itemName){
+        inventory.remove(itemName);
     }
 
     public ArrayList<Item> getInventory() {
         return inventory;
     }
 
-    public Item getCurrentWeapon() {
-            return currentWeapon;
+    public int getPlayerHealth() {
+        return playerHealth;
     }
+
+    public int getFoodHealth(Food food) {
+        return food.getHealthPoints();
+    }
+
+    public void updatePlayerHealth(int healthPoints) {
+        playerHealth += healthPoints;
+        playerHealth = Integer.min(playerHealth, 100);
+    }
+
+    public String playerHealthDescription (int playerHealth) {
+        String healthMsg = "";
+        if (playerHealth > -100 && playerHealth <= 10) {
+            healthMsg = "You are in critical condition and will die soon! Find food now!";
+        } else if (playerHealth <= 20) {
+            healthMsg = "Your health is very low! Do not engaged in battle!";
+        } else if (playerHealth <= 30) {
+            healthMsg = "You are in okay condition, but avoid battle";
+        } else if (playerHealth <= 40) {
+            healthMsg = "You are in great condition! But could be better. Find more food!";
+        } else if (playerHealth <= 50) {
+            healthMsg = "You are in very good condition!";
+        }
+        return healthMsg;
+    }
+
 
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
@@ -117,61 +122,35 @@ public class Player {
         return currentRoom;
     }
 
-    public String look() {
+    public String descriptionOfRoom() {
         return currentRoom.getDescriptionOfRoom();
     }
 
-    public String roomNumber() {
+    public String nameOfRoom() {
         return currentRoom.getNameOfRoom();
     }
 
 
-    public boolean goNorth() {
-        if (currentRoom.getNorth() != null) {
-            setCurrentRoom(getCurrentRoom().getNorth());
+    public boolean move(String direction) {
+        Room requestedRoom = null;
+        if(direction.contains("n")) {
+            requestedRoom = currentRoom.getNorth();
+        } else if (direction.contains("s")) {
+            requestedRoom = currentRoom.getSouth();
+        }else if (direction.contains("e")) {
+            requestedRoom = currentRoom.getEast();
+        }else if (direction.contains("w")) {
+            requestedRoom = currentRoom.getWest();
+        }
+
+        if(requestedRoom != null) {
+            currentRoom = requestedRoom;
             return true;
         } else {
             return false;
         }
     }
 
-    public boolean goSouth() {
-        if (currentRoom.getSouth() != null) {
-            setCurrentRoom(getCurrentRoom().getSouth());
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean goEast() {
-        if (currentRoom.getEast() != null) {
-            setCurrentRoom(getCurrentRoom().getEast());
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean goWest() {
-        if (currentRoom.getWest() != null) {
-            setCurrentRoom(getCurrentRoom().getWest());
-            return true;
-        } else {
-            return false;
-        }
-    }
 
 
 }
-
-/*
-    public Item lookForItems(){
-        Item itemInRoom = null;
-        for (int i = 0; i < currentRoom.getItems().size(); i++) {
-            itemInRoom = currentRoom.getItems().get(i);
-        }
-        return itemInRoom;
-    }
-
- */

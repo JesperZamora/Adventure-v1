@@ -15,14 +15,16 @@ public class Room {
         items.add(newItem);
     }
 
-    public void addFood(String foodName, String foodDescription, int healthPoints) {
+    public void addFoodItem(String foodName, String foodDescription, int healthPoints) {
         Item newFood = new Food(foodName, foodDescription, healthPoints);
         items.add(newFood);
     }
+
     public void addMeleeWeapon(String weaponName, String weaponDescription){
         Item newMeleeWeapon = new MeleeWeapon(weaponName,weaponDescription);
         items.add(newMeleeWeapon);
     }
+
     public void addRangedWeapon(String weaponName, String weaponDescription, int ammunition) {
         Item newRangedWeapon = new RangedWeapon(weaponName, weaponDescription, ammunition);
         items.add(newRangedWeapon);
@@ -41,15 +43,14 @@ public class Room {
         return null;
     }
 
-    public void deleteItem(Item item) {
-        int j = -1;
-        for (int i = 0; i <items.size(); i++) {
-            if (items.get(i) == item) {
-                j = i;
-            }
-            items.remove(j);
-        }
+    public void removeItemFromRoom(Item item) {
+        items.remove(item);
     }
+
+    public void addItemFromInventory (Item itemName) {
+        items.add(itemName);
+    }
+
 
     public Room(String nameOfRoom, String descriptionOfRoom) {
         this.nameOfRoom = nameOfRoom;

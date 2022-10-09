@@ -12,17 +12,14 @@ public class Adventure {
 
     //UserInterface -> Adventure -> Player -> Room -> Items
 
-    public Room getCurrentRoom() {
-        return player.getCurrentRoom();
-    }
-
-    public ArrayList<Item> currentRoomGetItems() {
-        return player.getCurrentRoom().getItems();
+    public boolean go(String direction) {
+        return player.move(direction);
     }
 
     public boolean takeItem(String itemName) {
         return player.takeItemInRoom(itemName);
     }
+
     public boolean dropItem(String itemName) {
         return player.dropItemInRoom(itemName);
     }
@@ -31,49 +28,77 @@ public class Adventure {
         return player.eatItem(foodName);
     }
 
-    public boolean equipItem(String weaponName) {
+    public WeaponEnum equipItem(String weaponName) {
         return player.equipWeapon(weaponName);
     }
 
-    public boolean attack() {
+
+
+    public AttackEnum attackWithWeapon() {
         return player.attack();
     }
 
-    public ArrayList<Item> getInventory() {
+    public String equippedWeapon() {
+        return player.getCurrentWeapon().getItemName();
+    }
+
+
+    public int playerHealth() {
+        return player.getPlayerHealth();
+    }
+
+    public String playerHealthDescription() {
+        int playerHealth = player.getPlayerHealth();
+        return player.playerHealthDescription(playerHealth);
+    }
+
+
+    public ArrayList<Item> showInventory() {
         return player.getInventory();
     }
 
-    public Item getCurrentWeapon(){
-        return player.getCurrentWeapon();
+    public ArrayList<Item> ShowItemsInRoom() {
+        return player.getCurrentRoom().getItems();
     }
 
-    public String look() {
-        return player.look();
+
+
+    public String currentRoom() {
+        return player.nameOfRoom();
     }
 
-    public String roomNumber() {
-        return player.roomNumber();
+    public String currentRoomDescription() {
+        return player.descriptionOfRoom();
     }
 
-    public boolean goNorth() {
-        return player.goNorth();
+
+    public String gameplayCommands() {
+        String commandList = """
+                Movement commands:
+                Type "go" and choose direction (eg. go north / go n)
+                "Go North"   (n) - move north
+                "Go South"   (s) - move south
+                "Go East"    (e) - move east
+                "Go West     (w) - move west
+                                
+                In-game commands:
+                "Look"       (l) - to look around
+                "Take"       (t) - take an item
+                "Drop"       (d) - drop item
+                "Eat"        (e) - eat item
+                "Health      (hp) - current health points
+                "Equip"      (eq) - equip item
+                "Attack"     (atk) - Attack with weapon
+                "Inventory"  (inv) - show inventory
+                                         
+                Other commands:
+                "Help"       (H) - list of commands
+                "Exit"           - exit gameplay
+                """;
+        return commandList;
     }
 
-    public boolean goSouth() {
-        return player.goSouth();
-    }
 
-    public boolean goEast() {
-        return player.goEast();
-    }
-
-    public boolean goWest() {
-        return player.goWest();
-    }
-
-    public int getHealth() {
-        return player.getPlayerHealth();
-    }
 
 
 }

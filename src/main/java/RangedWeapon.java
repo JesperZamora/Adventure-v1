@@ -4,14 +4,15 @@ public class RangedWeapon extends Weapon {
         super(itemName, itemDescription);
         this.ammunition = ammunition;
     }
-
-    public int getAmmunition() {
-        return ammunition;
+    @Override
+    public AttackEnum attack() {
+        if(ammunition> 0) {
+            ammunition -= 1;
+            return AttackEnum.FIRED;
+        } else
+            return AttackEnum.NO_AMMO;
     }
 
-    public void setAmmunition(int leftAmmunition) {
-        ammunition = leftAmmunition;
-    }
 
     @Override
     public String toString() {
