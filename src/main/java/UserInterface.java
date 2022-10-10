@@ -110,7 +110,7 @@ public class UserInterface {
                     System.out.println("Room description: " + adventure.currentRoomDescription());
                     System.out.println("You found item(s): ");
                     for (Item i : adventure.ShowItemsInRoom()) {
-                        System.out.println(i);
+                        System.out.println("> " + i);
                     }
                     break;
 
@@ -122,7 +122,7 @@ public class UserInterface {
                 case "inventory", "inv":
                     System.out.println("Your inventory contains: ");
                     for (Item i : adventure.showInventory()) {
-                        System.out.println(i);
+                        System.out.println("> " + i);
                     }
                     break;
 

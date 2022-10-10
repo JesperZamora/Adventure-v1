@@ -135,15 +135,15 @@ public class Player {
     }
 
 
-    public boolean move(String direction) {
+    public boolean move(char direction) {
         Room requestedRoom = null;
-        if(direction.contains("n")) {
+        if(direction == 'n') {
             requestedRoom = currentRoom.getNorth();
-        } else if (direction.contains("s")) {
+        } else if (direction == 's') {
             requestedRoom = currentRoom.getSouth();
-        }else if (direction.contains("e")) {
+        } else if (direction == 'e') {
             requestedRoom = currentRoom.getEast();
-        }else if (direction.contains("w")) {
+        } else if (direction == 'w') {
             requestedRoom = currentRoom.getWest();
         }
 
@@ -154,7 +154,4 @@ public class Player {
             return false;
         }
     }
-
-
-
 }

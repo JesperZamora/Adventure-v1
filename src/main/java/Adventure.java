@@ -13,7 +13,10 @@ public class Adventure {
     //UserInterface -> Adventure -> Player -> Room -> Items
 
     public boolean go(String direction) {
-        return player.move(direction);
+        if(direction.length() > 0)
+            return player.move(direction.charAt(0));
+        else
+            return false;
     }
 
     public boolean takeItem(String itemName) {
@@ -43,7 +46,7 @@ public class Adventure {
     }
 
     public int ammunitionCount() {
-        return player.ammunitionCount()-1;
+        return player.ammunitionCount();
     }
 
 
