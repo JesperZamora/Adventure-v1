@@ -63,7 +63,7 @@ public class Map {
         starterRoom = room1;
 
         // Enemy weapons
-        Weapon mw1 = new MeleeWeapon("chopsticks", "of wood", 5);
+        Weapon mw1 = new MeleeWeapon("chopsticks", "of wood", 10);
         Weapon mw2 = new MeleeWeapon("sword", "of wood", 10);
         Weapon mw3 = new RangedWeapon("gun", "from hell", 5, 10);
 

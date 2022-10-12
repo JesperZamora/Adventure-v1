@@ -24,6 +24,10 @@ public class UserInterface {
     public void userCommands() {
         String userChoice = "";
         while(!userChoice.equals("exit")) {
+            if (adventure.playerHealth() < 1) {
+                System.out.println("\nYou died! GAME OVER!");
+                System.exit(adventure.playerHealth());
+            }
 
             userChoice = input.nextLine();
             userChoice = userChoice.toLowerCase();
@@ -95,7 +99,7 @@ public class UserInterface {
                                 System.out.println("Ammunition count: " + adventure.ammunitionCount());
                             if (!adventure.ShowEnemyInRoom().isEmpty()) {
                                 System.out.println("Enemy health : " + adventure.enemyHealth());
-                                System.out.println("Enemy attacked doing " + adventure.enemyAttack() + "dmg!");
+                                System.out.println("Enemy attacked doing " + adventure.enemyAttack() + " dmg!");
                                 System.out.println("Your current health points: " + adventure.playerHealth());
                             }
                             break;
