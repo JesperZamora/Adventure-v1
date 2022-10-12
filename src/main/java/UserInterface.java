@@ -91,10 +91,13 @@ public class UserInterface {
                     switch (attack) {
                         case FIRED:
                             System.out.println("You attacked and fired " + adventure.equippedWeapon() + "!");
-                            System.out.println("Ammunition count: " + adventure.ammunitionCount());
-                            break;
-                        case MELEE:
-                            System.out.println("You attacked and swung " + adventure.equippedWeapon() + "!");
+                            if(adventure.equippedWeaponType() instanceof RangedWeapon)
+                                System.out.println("Ammunition count: " + adventure.ammunitionCount());
+                            if (!adventure.ShowEnemyInRoom().isEmpty()) {
+                                System.out.println("Enemy health : " + adventure.enemyHealth());
+                                System.out.println("Enemy attacked doing " + adventure.enemyAttack() + "dmg!");
+                                System.out.println("Your current health points: " + adventure.playerHealth());
+                            }
                             break;
                         case NO_WEAPON_EQUIPPED:
                             System.out.println("You need to equip a weapon first!");
@@ -112,6 +115,10 @@ public class UserInterface {
                     for (Item i : adventure.ShowItemsInRoom()) {
                         System.out.println("> " + i);
                     }
+                    System.out.println();
+                    System.out.println("Enemy spotted: ");
+                    for (Enemy i : adventure.ShowEnemyInRoom())
+                        System.out.println("> "+i);
                     break;
 
                 case "health", "hp":

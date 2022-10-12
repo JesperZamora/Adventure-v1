@@ -20,13 +20,13 @@ public class Room {
         items.add(newFood);
     }
 
-    public void addMeleeWeapon(String weaponName, String weaponDescription){
-        Item newMeleeWeapon = new MeleeWeapon(weaponName,weaponDescription);
+    public void addMeleeWeapon(String weaponName, String weaponDescription, int itemDamage){
+        Item newMeleeWeapon = new MeleeWeapon(weaponName,weaponDescription, itemDamage);
         items.add(newMeleeWeapon);
     }
 
-    public void addRangedWeapon(String weaponName, String weaponDescription, int ammunition) {
-        Item newRangedWeapon = new RangedWeapon(weaponName, weaponDescription, ammunition);
+    public void addRangedWeapon(String weaponName, String weaponDescription, int ammunition, int itemDamage) {
+        Item newRangedWeapon = new RangedWeapon(weaponName, weaponDescription, ammunition, itemDamage);
         items.add(newRangedWeapon);
     }
 

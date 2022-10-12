@@ -54,7 +54,7 @@ public class Adventure {
     }
 
     public int ammunitionCount() {
-        return player.ammunitionCount();
+        return player.getAmmunition();
     }
 
 
@@ -84,6 +84,10 @@ public class Adventure {
 
     public ArrayList<Enemy> ShowEnemyInRoom() {
         return player.getCurrentRoom().getEnemies();
+    }
+
+    public Item equippedWeaponType() {
+        return player.getCurrentWeapon();
     }
 
     public String currentRoomDescription() {

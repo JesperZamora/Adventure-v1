@@ -33,11 +33,11 @@ public class Map {
         room7.addFoodItem("fish", "smells a bit", -50);
 
         // Weapons
-        room1.addRangedWeapon("bazooka", "huge Bazooka", 2);
-        room1.addMeleeWeapon("knife", "long sharp knife");
-        room5.addRangedWeapon("ak-47", "straight from russia", 10);
-        room6.addMeleeWeapon("shoe", "size 46");
-        room9.addRangedWeapon("pistol", " old desert eagle", 5);
+        room1.addRangedWeapon("bazooka", "is huge", 2, 20);
+        room1.addMeleeWeapon("knife", "is long and sharp", 5);
+        room5.addRangedWeapon("ak-47", "straight from russia", 10, 8);
+        room6.addMeleeWeapon("shoe", "is a size 46", 10);
+        room9.addRangedWeapon("pistol", "looks like an old desert eagle", 5, 8);
 
         // Setting rooms
         room1.setEast(room2);

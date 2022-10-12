@@ -12,7 +12,6 @@ public class Enemy {
         this.enemyCurrentWeapon = enemyCurrentWeapon;
     }
 
-
     public String getEnemyName() {
         return enemyName;
     }
@@ -41,6 +40,6 @@ public class Enemy {
 
 
     public String toString() {
-        return enemyName + " " + enemyDescription + "\nHP: " + enemyHealth + "\nAtk weapon: " + enemyCurrentWeapon;
+        return enemyName + " " + enemyDescription + "\n> HP: " + enemyHealth + "\n> Atk weapon: " + enemyCurrentWeapon;
     }
 }

@@ -1,15 +1,18 @@
 public class MeleeWeapon extends Weapon {
-    public MeleeWeapon(String itemName, String itemDescription) {
-        super(itemName, itemDescription);
+
+    public MeleeWeapon(String itemName, String itemDescription, int itemDamage) {
+        super(itemName, itemDescription, itemDamage);
+
     }
 
     @Override
     public AttackEnum attack() {
-        return AttackEnum.MELEE;
+        return AttackEnum.FIRED;
     }
 
     @Override
-    public int ammunitionCount() {
+    public int getAmmunition() {
         return 0;
     }
+
 }
