@@ -124,9 +124,8 @@ public class UserInterface {
                         System.out.println("> " + i);
                     }
                     System.out.println();
-                    System.out.println("Enemy spotted: ");
                     for (Enemy i : adventure.ShowEnemyInRoom())
-                        System.out.println("> " + i);
+                        System.out.println(i);
                 }
                 case "health", "hp" -> {
                     System.out.println("Your health points is " + adventure.playerHealth());

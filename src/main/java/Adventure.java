@@ -10,7 +10,6 @@ public class Adventure {
         player.setCurrentRoom(map.getStarterRoom());
     }
 
-    //UserInterface -> Adventure -> Player -> Room -> Items
 
     public boolean go(String direction) {
         if(direction.length() > 0)

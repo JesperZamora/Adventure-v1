@@ -36,6 +36,6 @@ public class Enemy {
 
 
     public String toString() {
-        return enemyName + " " + enemyDescription + "\n> HP: " + enemyHealth + "\n> Weapon: " + enemyCurrentWeapon;
+        return "Enemy spotted: \n" +"> " + enemyName + " " + enemyDescription + "\n> HP: " + enemyHealth + "\n> Weapon: " + enemyCurrentWeapon;
     }
 }
