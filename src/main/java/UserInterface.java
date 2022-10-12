@@ -94,7 +94,7 @@ public class UserInterface {
                     AttackEnum attack = adventure.attackWithWeapon();
                     switch (attack) {
                         case FIRED:
-                            System.out.println("You attacked and fired " + adventure.equippedWeapon() + "!");
+                            System.out.println("You attacked with " + adventure.equippedWeapon() + "!");
                             if(adventure.equippedWeaponType() instanceof RangedWeapon)
                                 System.out.println("Ammunition count: " + adventure.ammunitionCount());
                             if (!adventure.ShowEnemyInRoom().isEmpty()) {

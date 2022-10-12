@@ -12,10 +12,6 @@ public class Enemy {
         this.enemyCurrentWeapon = enemyCurrentWeapon;
     }
 
-    public String getEnemyName() {
-        return enemyName;
-    }
-
     public int getEnemyHealth() {
         return enemyHealth;
     }
@@ -27,7 +23,6 @@ public class Enemy {
     public boolean enemyAlive() {
         return enemyHealth > 0;
     }
-
 
     public int enemyAttack() {
         return enemyCurrentWeapon.getItemDamage();

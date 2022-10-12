@@ -45,6 +45,7 @@ public class Adventure {
         return player.enemyHealth();
     }
 
+
     public int enemyAttack() {
         return player.enemyDamage();
     }

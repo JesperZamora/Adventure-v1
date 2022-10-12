@@ -72,6 +72,7 @@ public class Player {
             return AttackEnum.NO_WEAPON_EQUIPPED;
     }
 
+
     public int enemyHealth() {
         return currentRoom.findEnemyInRoom().getEnemyHealth();
     }
