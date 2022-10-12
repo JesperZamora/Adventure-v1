@@ -24,6 +24,7 @@ public class Enemy {
         return enemyHealth > 0;
     }
 
+
     public int enemyAttack() {
         return enemyCurrentWeapon.getItemDamage();
     }

@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Når player dør, så lukker programmet">
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="små rettelser">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665562358536</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="små rettelser">
+      <created>1665564967739</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1665564967739</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,12 +299,12 @@
     <MESSAGE value="Sat metoder i adventure klassn (controller) fra player klassen. Så userInterface giver info til controlleren." />
     <MESSAGE value="rettelse i interface og main" />
     <MESSAGE value="Rettet player go metode tilbage den den ikke fungerede ordenligt og lavet gettter i adventure." />
-    <MESSAGE value="små rettelser" />
     <MESSAGE value="rettet tekst i map" />
     <MESSAGE value="Attack command and method added." />
     <MESSAGE value="Ændret userinterface, så man kan split input fra bruger. fået implementeret enum. ændret nogle navne, på metoder så de giver bedre mening." />
     <MESSAGE value="Userinterface + små rettelser i meleeclass" />
     <MESSAGE value="Når player dør, så lukker programmet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Når player dør, så lukker programmet" />
+    <MESSAGE value="små rettelser" />
+    <option name="LAST_COMMIT_MESSAGE" value="små rettelser" />
   </component>
 </project>
