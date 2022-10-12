@@ -20,11 +20,6 @@ public class Enemy {
         this.enemyHealth = enemyHealth-enemyHealthDamage;
     }
 
-    public boolean enemyAlive() {
-        return enemyHealth > 0;
-    }
-
-
     public int enemyAttack() {
         return enemyCurrentWeapon.getItemDamage();
     }

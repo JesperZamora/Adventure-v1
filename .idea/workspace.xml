@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="små rettelser">
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="added enemy class.&#10;added features in map and room">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Diagrams/AdventureGameKlasseDiagram.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Diagrams/AktivitetsDiagramAttackSekvensen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Diagrams/AttackSekvensen.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +76,7 @@
       <workItem from="1665504769484" duration="33000" />
       <workItem from="1665508761724" duration="254000" />
       <workItem from="1665559210558" duration="1085000" />
+      <workItem from="1665598117508" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="Klasser oprettet">
       <created>1664186711682</created>
@@ -258,14 +260,7 @@
       <option name="project" value="LOCAL" />
       <updated>1665562358536</updated>
     </task>
-    <task id="LOCAL-00027" summary="små rettelser">
-      <created>1665564967739</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1665564967739</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,12 +296,12 @@
     <MESSAGE value="Sat metoder i adventure klassn (controller) fra player klassen. Så userInterface giver info til controlleren." />
     <MESSAGE value="rettelse i interface og main" />
     <MESSAGE value="Rettet player go metode tilbage den den ikke fungerede ordenligt og lavet gettter i adventure." />
+    <MESSAGE value="små rettelser" />
     <MESSAGE value="rettet tekst i map" />
     <MESSAGE value="Attack command and method added." />
     <MESSAGE value="Ændret userinterface, så man kan split input fra bruger. fået implementeret enum. ændret nogle navne, på metoder så de giver bedre mening." />
     <MESSAGE value="Userinterface + små rettelser i meleeclass" />
     <MESSAGE value="Når player dør, så lukker programmet" />
-    <MESSAGE value="små rettelser" />
-    <option name="LAST_COMMIT_MESSAGE" value="små rettelser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Når player dør, så lukker programmet" />
   </component>
 </project>
