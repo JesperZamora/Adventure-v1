@@ -26,11 +26,7 @@ public class Enemy {
     }
 
     public boolean enemyAlive() {
-        if (enemyHealth > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return enemyHealth > 0;
     }
 
 

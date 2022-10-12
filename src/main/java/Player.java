@@ -53,14 +53,35 @@ public class Player {
     }
 
     public AttackEnum attack() {
+        Enemy attackEnemy = currentRoom.findEnemyInRoom();
         if(currentWeapon != null) {
+            if(currentWeapon instanceof RangedWeapon && currentWeapon.getAmmunition() < 1)
+                return AttackEnum.NO_AMMO;
+            if (attackEnemy != null) {
+                attackEnemy.updateEnemyHealth(currentWeapon.getItemDamage());
+                takePlayerHealth(attackEnemy.enemyAttack());
+
+                if (!attackEnemy.enemyAlive()) {
+                    currentRoom.removeEnemy(attackEnemy);
+                    attackEnemy.dropEnemyWeapon(currentRoom);
+                }
+            }
             return currentWeapon.attack();
+
         } else
             return AttackEnum.NO_WEAPON_EQUIPPED;
     }
 
-    public int ammunitionCount() {
-        return currentWeapon.ammunitionCount();
+    public int enemyHealth() {
+        return currentRoom.findEnemyInRoom().getEnemyHealth();
+    }
+
+    public int enemyDamage() {
+        return currentRoom.findEnemyInRoom().enemyAttack();
+    }
+
+    public int getAmmunition() {
+        return currentWeapon.getAmmunition();
     }
 
     public Item getCurrentWeapon() {
@@ -94,6 +115,10 @@ public class Player {
 
     public int getFoodHealth(Food food) {
         return food.getHealthPoints();
+    }
+
+    public void takePlayerHealth(int health) {
+        playerHealth -= health;
     }
 
     public void updatePlayerHealth(int healthPoints) {

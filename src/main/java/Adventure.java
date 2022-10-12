@@ -41,6 +41,14 @@ public class Adventure {
         return player.attack();
     }
 
+    public int enemyHealth() {
+        return player.enemyHealth();
+    }
+
+    public int enemyAttack() {
+        return player.enemyDamage();
+    }
+
     public String equippedWeapon() {
         return player.getCurrentWeapon().getItemName();
     }
@@ -72,6 +80,10 @@ public class Adventure {
 
     public String currentRoom() {
         return player.nameOfRoom();
+    }
+
+    public ArrayList<Enemy> ShowEnemyInRoom() {
+        return player.getCurrentRoom().getEnemies();
     }
 
     public String currentRoomDescription() {

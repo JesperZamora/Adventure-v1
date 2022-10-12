@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Ændret userinterface, så man kan split input fra bruger. fået implementeret enum. ændret nogle navne, på metoder så de giver bedre mening.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Opdateret gameplay commands">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +20,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -71,10 +72,8 @@
       <workItem from="1664186543839" duration="2791000" />
       <workItem from="1664286652664" duration="1922000" />
       <workItem from="1664777599246" duration="17875000" />
-      <workItem from="1665303202116" duration="8583000" />
-      <workItem from="1665504769484" duration="33000" />
-      <workItem from="1665508761724" duration="254000" />
-      <workItem from="1665559210558" duration="1085000" />
+      <workItem from="1665052192658" duration="72000" />
+      <workItem from="1665388427355" duration="2149000" />
     </task>
     <task id="LOCAL-00001" summary="Klasser oprettet">
       <created>1664186711682</created>
@@ -230,21 +229,7 @@
       <option name="project" value="LOCAL" />
       <updated>1664882050522</updated>
     </task>
-    <task id="LOCAL-00023" summary="Attack command and method added.">
-      <created>1665063038212</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1665063038212</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Ændret userinterface, så man kan split input fra bruger. fået implementeret enum. ændret nogle navne, på metoder så de giver bedre mening.">
-      <created>1665309530366</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1665309530366</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,8 +267,6 @@
     <MESSAGE value="Rettet player go metode tilbage den den ikke fungerede ordenligt og lavet gettter i adventure." />
     <MESSAGE value="små rettelser" />
     <MESSAGE value="rettet tekst i map" />
-    <MESSAGE value="Attack command and method added." />
-    <MESSAGE value="Ændret userinterface, så man kan split input fra bruger. fået implementeret enum. ændret nogle navne, på metoder så de giver bedre mening." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ændret userinterface, så man kan split input fra bruger. fået implementeret enum. ændret nogle navne, på metoder så de giver bedre mening." />
+    <option name="LAST_COMMIT_MESSAGE" value="rettet tekst i map" />
   </component>
 </project>
