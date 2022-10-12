@@ -62,6 +62,17 @@ public class Map {
         // Setting starterRoom
         starterRoom = room1;
 
+        // Enemy weapons
+        Weapon mw1 = new MeleeWeapon("chopsticks", "of wood", 5);
+        Weapon mw2 = new MeleeWeapon("sword", "of wood", 10);
+        Weapon mw3 = new RangedWeapon("gun", "from hell", 5, 10);
+
+        //Enemy objects
+        room1.addEnemy("Monster", "is very huge and hairy!", 50, mw1);
+        room2.addEnemy("Venom", "is big and black with white eyes and sharp teethes!", 50, mw2);
+        room5.addEnemy("Slender man", "is abnormally tall, with long nasty fingers!", 50, mw3);
+
+
     }
 
     public Room getStarterRoom() {

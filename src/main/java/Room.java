@@ -30,6 +30,34 @@ public class Room {
         items.add(newRangedWeapon);
     }
 
+    // Del 5
+    private ArrayList<Enemy> enemies = new ArrayList<>();
+
+    public void addEnemy(String enemyName, String enemyDescription, int enemyHealth, Weapon enemyWeapon){
+        Enemy newEnemy = new Enemy(enemyName, enemyDescription, enemyHealth, enemyWeapon);
+        enemies.add(newEnemy);
+    }
+    // Del 5
+    public ArrayList<Enemy> getEnemies() {
+        return enemies;
+    }
+    // Del 5
+    public void removeEnemy(Enemy enemyName) {
+        enemies.remove(enemyName);
+    }
+    public Weapon addEnemyItemToRoom(Item enemyItem) {
+        items.add(enemyItem);
+        return null;
+    }
+
+    // Del 5
+    public Enemy findEnemyInRoom(){
+        for(Enemy findEnemy : enemies) {
+            return findEnemy;
+        }
+        return null;
+    }
+
     public ArrayList<Item> getItems() {
         return items;
     }
