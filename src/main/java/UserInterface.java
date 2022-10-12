@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner input;
     private Adventure adventure;
-
+    String userChoice = "";
+    String userChoiceGO = "";
+    boolean gameStatus = true;
     public UserInterface(Adventure a) {
         input = new Scanner(System.in);
         adventure = a;
@@ -22,13 +24,30 @@ public class UserInterface {
     }
 
     public void userCommands() {
-        String userChoice = "";
-        while(!userChoice.equals("exit")) {
+
+        while(!userChoice.equals("exit") && gameStatus) {
             if (adventure.playerHealth() < 1) {
-                System.out.println("\nYou died! GAME OVER!");
-                System.exit(adventure.playerHealth());
+                gameStatus = false;
+                System.out.println("""
+
+                         ██████╗  █████╗ ███╗   ███╗███████╗     ██████╗ ██╗   ██╗███████╗██████╗ ██╗
+                        ██╔════╝ ██╔══██╗████╗ ████║██╔════╝    ██╔═══██╗██║   ██║██╔════╝██╔══██╗██║
+                        ██║  ███╗███████║██╔████╔██║█████╗      ██║   ██║██║   ██║█████╗  ██████╔╝██║
+                        ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝      ██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗╚═╝
+                        ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗    ╚██████╔╝ ╚████╔╝ ███████╗██║  ██║██╗
+                         ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝     ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝╚═╝
+                                           > PRESS [R] TO RESTART AND TRY AGAIN <""");
+                System.out.print("> ");
+                userChoiceGO = input.next();
+                userChoiceGO = userChoiceGO.toLowerCase();
+                if (userChoiceGO.equals("r")) {
+                    Main.runGame();
+                } else {
+                    System.exit(0);
+                }
             }
 
+            System.out.print("> ");
             userChoice = input.nextLine();
             userChoice = userChoice.toLowerCase();
             String[] userInput = userChoice.split(" ");
@@ -39,80 +58,65 @@ public class UserInterface {
             }
 
             switch (command) {
-                case "go":
+                case "go" -> {
                     boolean canGo = adventure.go(userCommand);
                     if (canGo) {
                         System.out.println("You have gone " + userCommand);
                     } else {
                         System.out.println("You can not go that way!");
                     }
-                    break;
-
-                case "take","t":
+                }
+                case "take", "t" -> {
                     boolean canTakeItem = adventure.takeItem(userCommand);
-                    if(canTakeItem) {
+                    if (canTakeItem) {
                         System.out.println("You have taken " + userCommand + "!");
                     } else {
                         System.out.println("There is no such item to be taken");
                     }
-                    break;
-
-                case "drop", "d":
+                }
+                case "drop", "d" -> {
                     boolean canDropItem = adventure.dropItem(userCommand);
-                    if(canDropItem) {
+                    if (canDropItem) {
                         System.out.println("You have dropped " + userCommand + "!");
                     } else {
                         System.out.println("You have no such item to drop!");
                     }
-                    break;
-
-                case "eat", "e":
+                }
+                case "eat", "e" -> {
                     boolean canEatFood = adventure.eatItem(userCommand);
-                    if(canEatFood) {
+                    if (canEatFood) {
                         System.out.println("You have eaten " + userCommand + "!");
                     } else {
                         System.out.println("You can not eat that!");
                     }
-                    break;
-
-                case "equip", "eq":
+                }
+                case "equip", "eq" -> {
                     WeaponEnum isWeapon = adventure.equipItem(userCommand);
                     switch (isWeapon) {
-                        case WEAPON:
-                            System.out.println("You have now equipped " + userCommand + "!");
-                            break;
-                        case NOT_FOUND:
-                            System.out.println(userCommand + " not found in inventory!");
-                            break;
-                        case NOT_WEAPON:
-                            System.out.println("This is not a weapon!");
-                            break;
+                        case WEAPON -> System.out.println("You have now equipped " + userCommand + "!");
+                        case NOT_FOUND -> System.out.println(userCommand + " not found in inventory!");
+                        case NOT_WEAPON -> System.out.println("This is not a weapon!");
                     }
-                    break;
-
-                case "attack", "atk":
+                }
+                case "attack", "atk" -> {
                     AttackEnum attack = adventure.attackWithWeapon();
                     switch (attack) {
-                        case FIRED:
+                        case FIRED -> {
                             System.out.println("You attacked with " + adventure.equippedWeapon() + "!");
-                            if(adventure.equippedWeaponType() instanceof RangedWeapon)
+                            if (adventure.equippedWeaponType() instanceof RangedWeapon)
                                 System.out.println("Ammunition count: " + adventure.ammunitionCount());
                             if (!adventure.ShowEnemyInRoom().isEmpty()) {
                                 System.out.println("Enemy health : " + adventure.enemyHealth());
                                 System.out.println("Enemy attacked doing " + adventure.enemyAttack() + " dmg!");
                                 System.out.println("Your current health points: " + adventure.playerHealth());
                             }
-                            break;
-                        case NO_WEAPON_EQUIPPED:
-                            System.out.println("You need to equip a weapon first!");
-                            break;
-                        case NO_AMMO:
-                            System.out.println("No ammunition left!");
-                            break;
+                        }
+                        case DEAD -> System.out.println("You have killed the enemy!");
+                        case NO_WEAPON_EQUIPPED -> System.out.println("You need to equip a weapon first!");
+                        case NO_AMMO -> System.out.println("No ammunition left!");
                     }
-                    break;
-
-                case "look", "l":
+                }
+                case "look", "l" -> {
                     System.out.println("This is " + adventure.currentRoom());
                     System.out.println("Room description: " + adventure.currentRoomDescription());
                     System.out.println("You found item(s): ");
@@ -122,33 +126,25 @@ public class UserInterface {
                     System.out.println();
                     System.out.println("Enemy spotted: ");
                     for (Enemy i : adventure.ShowEnemyInRoom())
-                        System.out.println("> "+i);
-                    break;
-
-                case "health", "hp":
+                        System.out.println("> " + i);
+                }
+                case "health", "hp" -> {
                     System.out.println("Your health points is " + adventure.playerHealth());
                     System.out.println(adventure.playerHealthDescription());
-                    break;
-
-                case "inventory", "inv":
+                }
+                case "inventory", "inv", "i" -> {
                     System.out.println("Your inventory contains: ");
                     for (Item i : adventure.showInventory()) {
                         System.out.println("> " + i);
                     }
-                    break;
-
-                case "help", "h":
-                    System.out.println(adventure.gameplayCommands());
-                    break;
-
-                case "exit":
+                }
+                case "help", "h" -> System.out.println(adventure.gameplayCommands());
+                case "exit" -> {
                     System.out.println("Exiting game. Goodbye!");
                     int exit = 0;
                     System.exit(exit);
-                    break;
-
-                default:
-                    System.out.println("Invalid command! Try again");
+                }
+                default -> System.out.println("Invalid command! Try again");
             }
         }
     }

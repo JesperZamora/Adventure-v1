@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.EnumSet;
 
 public class Player {
     private Room currentRoom;
     private Weapon currentWeapon;
-    private int playerHealth = 50;
+    private int playerHealth = 100;
     private ArrayList<Item> inventory = new ArrayList<>();
 
     public boolean takeItemInRoom(String itemName) {
@@ -64,6 +65,7 @@ public class Player {
                 if (!attackEnemy.enemyAlive()) {
                     currentRoom.removeEnemy(attackEnemy);
                     attackEnemy.dropEnemyWeapon(currentRoom);
+                    return AttackEnum.DEAD;
                 }
             }
             return currentWeapon.attack();
@@ -114,6 +116,10 @@ public class Player {
         return playerHealth;
     }
 
+    public void restartPlayerHealth() {
+        playerHealth = 50;
+    }
+
     public int getFoodHealth(Food food) {
         return food.getHealthPoints();
     }
@@ -129,15 +135,15 @@ public class Player {
 
     public String playerHealthDescription (int playerHealth) {
         String healthMsg = "";
-        if (playerHealth > -100 && playerHealth <= 10) {
+        if (playerHealth < 10) {
             healthMsg = "You are in critical condition and will die soon! Find food now!";
-        } else if (playerHealth <= 20) {
-            healthMsg = "Your health is very low! Do not engaged in battle!";
         } else if (playerHealth <= 30) {
-            healthMsg = "You are in okay condition, but avoid battle";
-        } else if (playerHealth <= 40) {
-            healthMsg = "You are in great condition! But could be better. Find more food!";
+            healthMsg = "Your health is very low! Do not engaged in battle!";
         } else if (playerHealth <= 50) {
+            healthMsg = "You are in okay condition, but avoid battle";
+        } else if (playerHealth <= 75) {
+            healthMsg = "You are in great condition! But could be better. Find more food!";
+        } else if (playerHealth <= 100) {
             healthMsg = "You are in very good condition!";
         }
         return healthMsg;

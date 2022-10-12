@@ -1,5 +1,5 @@
 public enum AttackEnum {
-    MELEE,
+    DEAD,
     FIRED,
     NO_AMMO,
     NO_WEAPON_EQUIPPED

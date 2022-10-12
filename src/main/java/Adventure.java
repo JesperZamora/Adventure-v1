@@ -46,6 +46,7 @@ public class Adventure {
     }
 
 
+    public void restartPlayerHealth() { player.restartPlayerHealth(); }
     public int enemyAttack() {
         return player.enemyDamage();
     }
@@ -97,7 +98,7 @@ public class Adventure {
 
 
     public String gameplayCommands() {
-        String commandList = """
+        return """
                 Movement commands:
                 Type "go" and choose direction (eg. go north / go n)
                 "Go North"   (n) - move north
@@ -113,13 +114,12 @@ public class Adventure {
                 "Health      (hp) - current health points
                 "Equip"      (eq) - equip item
                 "Attack"     (atk) - Attack with weapon
-                "Inventory"  (inv) - show inventory
+                "Inventory"  (i) - show inventory
                                          
                 Other commands:
                 "Help"       (H) - list of commands
                 "Exit"           - exit gameplay
                 """;
-        return commandList;
     }
 
 

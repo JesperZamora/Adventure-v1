@@ -34,7 +34,7 @@ public class Map {
 
         // Weapons
         room1.addRangedWeapon("bazooka", "is huge", 2, 20);
-        room1.addMeleeWeapon("knife", "is long and sharp", 5);
+        room1.addMeleeWeapon("knife", "is long and sharp", 10);
         room5.addRangedWeapon("ak-47", "straight from russia", 10, 8);
         room6.addMeleeWeapon("shoe", "is a size 46", 10);
         room9.addRangedWeapon("pistol", "looks like an old desert eagle", 5, 8);
@@ -63,7 +63,7 @@ public class Map {
         starterRoom = room1;
 
         // Enemy weapons
-        Weapon mw1 = new MeleeWeapon("chopsticks", "of wood", 1);
+        Weapon mw1 = new MeleeWeapon("chopsticks", "of wood", 5);
         Weapon mw2 = new MeleeWeapon("sword", "of wood", 10);
         Weapon mw3 = new RangedWeapon("gun", "from hell", 5, 10);
 
