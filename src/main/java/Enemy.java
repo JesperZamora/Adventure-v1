@@ -20,6 +20,7 @@ public class Enemy {
         this.enemyHealth = enemyHealth-enemyHealthDamage;
     }
 
+    public boolean enemyAlive() { return enemyHealth > 0; }
     public int enemyAttack() {
         return enemyCurrentWeapon.getItemDamage();
     }
@@ -31,6 +32,6 @@ public class Enemy {
 
 
     public String toString() {
-        return "Enemy spotted: \n" +"> " + enemyName + " " + enemyDescription + "\n> HP: " + enemyHealth + "\n> Weapon: " + enemyCurrentWeapon;
+        return "[👻] Enemy spotted: \n" +"> " + enemyName + " " + enemyDescription + "\n> HP: " + enemyHealth + "\n> Weapon: " + enemyCurrentWeapon;
     }
 }

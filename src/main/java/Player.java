@@ -41,6 +41,16 @@ public class Player {
         return false;
     }
 
+    public int getFoodHealth(String foodName) {
+        Item foodItem = findInventoryItems(foodName);
+        if (foodItem != null) {
+            if (foodItem instanceof Food) {
+                return getFoodHealth((Food) foodItem);
+            }
+        }
+        return 0;
+    }
+
     public WeaponEnum equipWeapon(String weaponName) {
         Item equipWeapon = findInventoryItems(weaponName);
         if (equipWeapon instanceof Weapon) {
@@ -50,7 +60,7 @@ public class Player {
         } else if (equipWeapon == null) {
             return WeaponEnum.NOT_WEAPON;
         } else
-        return WeaponEnum.NOT_FOUND;
+            return WeaponEnum.NOT_FOUND;
     }
 
     public AttackEnum attack() {

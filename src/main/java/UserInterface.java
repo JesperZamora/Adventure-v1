@@ -61,65 +61,67 @@ public class UserInterface {
                 case "go" -> {
                     boolean canGo = adventure.go(userCommand);
                     if (canGo) {
-                        System.out.println("You have gone " + userCommand);
+                        System.out.println("[🧭] You have gone " + userCommand);
                     } else {
-                        System.out.println("You can not go that way!");
+                        System.out.println("[⛔] You can not go that way!");
                     }
                 }
                 case "take", "t" -> {
                     boolean canTakeItem = adventure.takeItem(userCommand);
                     if (canTakeItem) {
-                        System.out.println("You have taken " + userCommand + "!");
+                        System.out.println("[🫳] You have taken " + userCommand + "!");
                     } else {
-                        System.out.println("There is no such item to be taken");
+                        System.out.println("[⛔] There is no such item to be taken");
                     }
                 }
                 case "drop", "d" -> {
                     boolean canDropItem = adventure.dropItem(userCommand);
                     if (canDropItem) {
-                        System.out.println("You have dropped " + userCommand + "!");
+                        System.out.println("[🫳] You have dropped " + userCommand + "!");
                     } else {
-                        System.out.println("You have no such item to drop!");
+                        System.out.println("[⛔] You have no such item to drop!");
                     }
                 }
                 case "eat", "e" -> {
+                    int foodHealth = adventure.getFoodHealth(userCommand);
                     boolean canEatFood = adventure.eatItem(userCommand);
                     if (canEatFood) {
-                        System.out.println("You have eaten " + userCommand + "!");
+                        System.out.println("[😋l] You have eaten " + userCommand + " and " + (foodHealth < 1 ? "lost " : "gained ") + foodHealth + " health!");
+                        System.out.println("[❤] You current health is now " + adventure.playerHealth());
                     } else {
-                        System.out.println("You can not eat that!");
+                        System.out.println("[⛔] You can not eat that!");
                     }
                 }
                 case "equip", "eq" -> {
                     WeaponEnum isWeapon = adventure.equipItem(userCommand);
                     switch (isWeapon) {
-                        case WEAPON -> System.out.println("You have now equipped " + userCommand + "!");
-                        case NOT_FOUND -> System.out.println(userCommand + " not found in inventory!");
-                        case NOT_WEAPON -> System.out.println("This is not a weapon!");
+                        case WEAPON -> System.out.println("[⚔] You have now equipped " + userCommand + "!");
+                        case NOT_FOUND -> System.out.println("[⛔] " + userCommand + " not found in inventory!");
+                        case NOT_WEAPON -> System.out.println("[⛔] " + userCommand + " is not a weapon!");
                     }
                 }
                 case "attack", "atk" -> {
                     AttackEnum attack = adventure.attackWithWeapon();
                     switch (attack) {
                         case FIRED -> {
-                            System.out.println("You attacked with " + adventure.equippedWeapon() + "!");
+                            System.out.println("[🤺] You attacked with " + adventure.equippedWeapon() + "!");
                             if (adventure.equippedWeaponType() instanceof RangedWeapon)
-                                System.out.println("Ammunition count: " + adventure.ammunitionCount());
+                                System.out.println("[🔫] Ammunition count: " + adventure.ammunitionCount());
                             if (!adventure.ShowEnemyInRoom().isEmpty()) {
-                                System.out.println("Enemy health : " + adventure.enemyHealth());
-                                System.out.println("Enemy attacked doing " + adventure.enemyAttack() + " dmg!");
-                                System.out.println("Your current health points: " + adventure.playerHealth());
+                                System.out.println("[🖤] Enemy health: " + adventure.enemyHealth());
+                                System.out.println("[💔] Enemy attacked doing " + adventure.enemyAttack() + " damage!");
+                                System.out.println("[❤] Your current health points is now " + adventure.playerHealth() + "!");
                             }
                         }
-                        case DEAD -> System.out.println("You have killed the enemy!");
-                        case NO_WEAPON_EQUIPPED -> System.out.println("You need to equip a weapon first!");
-                        case NO_AMMO -> System.out.println("No ammunition left!");
+                        case DEAD -> System.out.println("[💀] You have killed the enemy!");
+                        case NO_WEAPON_EQUIPPED -> System.out.println("[⚔] You need to equip a weapon first!");
+                        case NO_AMMO -> System.out.println("[🔫] No ammunition left!");
                     }
                 }
                 case "look", "l" -> {
-                    System.out.println("This is " + adventure.currentRoom());
-                    System.out.println("Room description: " + adventure.currentRoomDescription());
-                    System.out.println("You found item(s): ");
+                    System.out.println("[🚪] This is " + adventure.currentRoom());
+                    System.out.println("[🧩] Room description: " + adventure.currentRoomDescription());
+                    System.out.println("[🔦] You found item(s): ");
                     for (Item i : adventure.ShowItemsInRoom()) {
                         System.out.println("> " + i);
                     }
@@ -128,22 +130,22 @@ public class UserInterface {
                         System.out.println(i);
                 }
                 case "health", "hp" -> {
-                    System.out.println("Your health points is " + adventure.playerHealth());
+                    System.out.println("[❤] Your health points is " + adventure.playerHealth());
                     System.out.println(adventure.playerHealthDescription());
                 }
                 case "inventory", "inv", "i" -> {
-                    System.out.println("Your inventory contains: ");
+                    System.out.println("[🎒] Your inventory contains: ");
                     for (Item i : adventure.showInventory()) {
                         System.out.println("> " + i);
                     }
                 }
                 case "help", "h" -> System.out.println(adventure.gameplayCommands());
                 case "exit" -> {
-                    System.out.println("Exiting game. Goodbye!");
+                    System.out.println("[👋] Exiting game. Goodbye!");
                     int exit = 0;
                     System.exit(exit);
                 }
-                default -> System.out.println("Invalid command! Try again");
+                default -> System.out.println("[⛔] Invalid command! Try again");
             }
         }
     }

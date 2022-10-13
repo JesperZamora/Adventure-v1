@@ -26,6 +26,10 @@ public class Adventure {
         return player.dropItemInRoom(itemName);
     }
 
+    public int getFoodHealth(String foodName) {
+        return player.getFoodHealth(foodName);
+    }
+
     public boolean eatItem(String foodName) {
         return player.eatItem(foodName);
     }
