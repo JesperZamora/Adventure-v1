@@ -86,8 +86,8 @@ public class UserInterface {
                     int foodHealth = adventure.getFoodHealth(userCommand);
                     boolean canEatFood = adventure.eatItem(userCommand);
                     if (canEatFood) {
-                        System.out.println("[😋l] You have eaten " + userCommand + " and " + (foodHealth < 1 ? "lost " : "gained ") + foodHealth + " health!");
-                        System.out.println("[❤] You current health is now " + adventure.playerHealth());
+                        System.out.println("[😋] You have eaten " + userCommand + " and " + (foodHealth < 1 ? "lost " : "gained ") + foodHealth + " health!");
+                        System.out.println("[♥] You current health is now " + adventure.playerHealth());
                     } else {
                         System.out.println("[⛔] You can not eat that!");
                     }
@@ -110,7 +110,7 @@ public class UserInterface {
                             if (!adventure.ShowEnemyInRoom().isEmpty()) {
                                 System.out.println("[🖤] Enemy health: " + adventure.enemyHealth());
                                 System.out.println("[💔] Enemy attacked doing " + adventure.enemyAttack() + " damage!");
-                                System.out.println("[❤] Your current health points is now " + adventure.playerHealth() + "!");
+                                System.out.println("[♥] Your current health points is now " + adventure.playerHealth() + "!");
                             }
                         }
                         case DEAD -> System.out.println("[💀] You have killed the enemy!");
@@ -130,7 +130,7 @@ public class UserInterface {
                         System.out.println(i);
                 }
                 case "health", "hp" -> {
-                    System.out.println("[❤] Your health points is " + adventure.playerHealth());
+                    System.out.println("[♥] Your health points is " + adventure.playerHealth());
                     System.out.println(adventure.playerHealthDescription());
                 }
                 case "inventory", "inv", "i" -> {

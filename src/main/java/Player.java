@@ -146,15 +146,15 @@ public class Player {
     public String playerHealthDescription (int playerHealth) {
         String healthMsg = "";
         if (playerHealth < 10) {
-            healthMsg = "You are in critical condition and will die soon! Find food now!";
+            healthMsg = "[🏥] You are in critical condition and will die soon! Find food now!";
         } else if (playerHealth <= 30) {
-            healthMsg = "Your health is very low! Do not engaged in battle!";
+            healthMsg = "[💔] Your health is very low! Do not engaged in battle!";
         } else if (playerHealth <= 50) {
-            healthMsg = "You are in okay condition, but avoid battle";
+            healthMsg = "[💛] You are in okay condition, but avoid battle";
         } else if (playerHealth <= 75) {
-            healthMsg = "You are in great condition! But could be better. Find more food!";
+            healthMsg = "[💙] You are in great condition! But could be better. Find more food!";
         } else if (playerHealth <= 100) {
-            healthMsg = "You are in very good condition!";
+            healthMsg = "[💚] You are in very good condition!";
         }
         return healthMsg;
     }

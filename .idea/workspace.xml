@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Userinterface + små rettelser i meleeclass">
+    <list default="true" id="7ab8b979-0913-4c12-a4af-720409887393" name="Changes" comment="Updated more beautiful UI design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665561632261</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Updated more beautiful UI design">
+      <created>1665659089373</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1665659089373</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +298,7 @@
     <MESSAGE value="Attack command and method added." />
     <MESSAGE value="Ændret userinterface, så man kan split input fra bruger. fået implementeret enum. ændret nogle navne, på metoder så de giver bedre mening." />
     <MESSAGE value="Userinterface + små rettelser i meleeclass" />
-    <option name="LAST_COMMIT_MESSAGE" value="Userinterface + små rettelser i meleeclass" />
+    <MESSAGE value="Updated more beautiful UI design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated more beautiful UI design" />
   </component>
 </project>
